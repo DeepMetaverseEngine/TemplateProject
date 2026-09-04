@@ -53,6 +53,7 @@
 		<Project Path="DeepCore/DeepMetaGame.UnityPreview/DeepMetaGame.UnityPreview.csproj" />
 		<Project Path="DeepCore/DeepMetaGame.ZoneClient/DeepMetaGame.ZoneClient.csproj" />
 		<Project Path="DeepCore/DeepMetaGame.ZoneServer/DeepMetaGame.ZoneServer.csproj" />
+		<Project Path="DeepCore/DeepMetaGame.Win32.Editor/DeepMetaGame.Win32.Editor.csproj" />
 	</Folder>
 	<Folder Name="/0.DeepCore/3.Server/">
 		<Project Path="DeepCore/DeepCrystal/DeepCrystal.csproj" />
@@ -74,20 +75,41 @@
 		<Project Path="DeepCore/MMO.Server/MMO.Server.csproj" />
 	</Folder>
 	<Folder Name="/1.EditorMain/">
-		<Project Path="DeepEditorMain/DeepEditor.Common/DeepEditor.Common.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.AI/DeepGameEditor3D.AI.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.Main/DeepGameEditor3D.Main.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.MMO/DeepGameEditor3D.MMO.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.MMOServer/DeepGameEditor3D.MMOServer.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.Packages/DeepGameEditor3D.Packages.csproj">
-			<Build Solution="Source|Any CPU" Project="false" />
+		<Project Path="DeepEditorMain/DeepEditor.Common/DeepEditor.Common.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
 		</Project>
-		<Project Path="DeepEditorMain/DeepGameEditor3D.Plugin3D/DeepGameEditor3D.Plugin3D.csproj" />
-		<Project Path="DeepEditorMain/DeepGameEditor3D.Unity3D/DeepGameEditor3D.Unity3D.csproj" />
-		<Project Path="DeepEditorMain/DeepMetaGame.Win32.Editor/DeepMetaGame.Win32.Editor.csproj" />
-		<Project Path="DeepEditorMain/DeepMetaGame.Win32/DeepMetaGame.Win32.csproj" />
-		<Project Path="DeepEditorMain/DeepTools.MPQ/DeepTools.MPQ.csproj" />
-		<Project Path="DeepEditorMain/DeepTools.MPQUpdate/DeepTools.MPQUpdate.csproj" />
+		<Project Path="DeepEditorMain/DeepGameEditor3D.AI/DeepGameEditor3D.AI.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.Main/DeepGameEditor3D.Main.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.MMO/DeepGameEditor3D.MMO.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.MMOServer/DeepGameEditor3D.MMOServer.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.Packages/DeepGameEditor3D.Packages.csproj">
+			<Build Solution="*|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.Plugin3D/DeepGameEditor3D.Plugin3D.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepGameEditor3D.Unity3D/DeepGameEditor3D.Unity3D.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
+		<Project Path="DeepEditorMain/DeepMetaGame.Win32/DeepMetaGame.Win32.csproj">
+			<Build Solution="Debug|Any CPU" Project="false" />
+			<Build Solution="Release|Any CPU" Project="false" />
+		</Project>
 	</Folder>
 	<Folder Name="/2._Temp_Battle/">
 		<Project Path="_Temp_Src/_Temp_.Battle/_Temp_.Battle.csproj" />

@@ -36,6 +36,7 @@
 		<ProjectReference Include="..\..\DeepCore\DeepCore.Voxel\DeepCore.Voxel.csproj" />
 		<ProjectReference Include="..\..\DeepCore\DeepCore\DeepCore.csproj" />
 		<ProjectReference Include="..\..\DeepCore\DeepCrystal\DeepCrystal.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Win32.Editor\DeepMetaGame.Win32.Editor.csproj" />
 		<ProjectReference Include="..\..\DeepCore\DeepTools.CodeGen\DeepTools.CodeGen.csproj" />
 		<ProjectReference Include="..\..\DeepCore\DeepTools.NuGetIncrement\DeepTools.NuGetIncrement.csproj" />
 		<ProjectReference Include="..\..\DeepCore\DeepTools.SvnCombiner\DeepTools.SvnCombiner.csproj" />
@@ -89,6 +90,12 @@
 		</Reference>
 		<Reference Include="DeepGameEditor3D.Unity3D">
 			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.Unity3D.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepEditor.Common">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepEditor.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepMetaGame.Win32">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepMetaGame.Win32.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
