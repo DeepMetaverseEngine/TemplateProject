@@ -1,0 +1,13 @@
+.settings
+.setting
+.state
+.conflict
+.clipboard_transform
+buildlogtep.json
+*.log
+/bin
+/.bin
+/.bin_unity
+/state
+/code/bin
+/code/obj
