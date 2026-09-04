@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFrameworks>net9.0-windows</TargetFrameworks>
+		<UseWindowsForms>true</UseWindowsForms>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<Version>1.0.2</Version>
+		<LangVersion>latest</LangVersion>
+		<Deterministic>true</Deterministic>
+		<Configurations>Debug;Release;Source</Configurations>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Compile Remove="Resources\**" />
+	  <EmbeddedResource Remove="Resources\**" />
+	  <None Remove="Resources\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="copyres.bat" />
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Include="copyres.bat" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\DeepCore\DeepCore.GUI.FairyGUI\DeepCore.GUI.FairyGUI.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Event.Debug\DeepCore.Event.Debug.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Event.Lua\DeepCore.Event.Lua.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Event\DeepCore.Event.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Geometry\DeepCore.Geometry.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.GUI.Display\DeepCore.GUI.Display.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.GUI\DeepCore.GUI.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.SharpZipLib\DeepCore.SharpZipLib.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Template.MoonSharp\DeepCore.Template.MoonSharp.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Template.NewtonJson\DeepCore.Template.NewtonJson.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Voxel\DeepCore.Voxel.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore\DeepCore.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCrystal\DeepCrystal.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.CodeGen\DeepTools.CodeGen.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.NuGetIncrement\DeepTools.NuGetIncrement.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.SvnCombiner\DeepTools.SvnCombiner.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.Voxel\DeepTools.Voxel.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.XLS2Lang\DeepTools.XLS2Lang.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Mysql\DeepFrozen.MySQL.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Redis\DeepFrozen.Redis.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.RPC.ICE\DeepFrozen.RPC.ICE.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.RPC\DeepFrozen.RPC.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Server.NetUV\DeepFrozen.Server.NetUV.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.DBLauncher\DeepTools.DBLauncher.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Data\DeepMetaGame.Data.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Display\DeepMetaGame.Display.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Host\DeepMetaGame.Host.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Slave\DeepMetaGame.Slave.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Tools\DeepMetaGame.Tools.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.ZoneClient\DeepMetaGame.ZoneClient.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.ZoneServer\DeepMetaGame.ZoneServer.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepOpenAI\DeepOpenAI.csproj" />
+		<ProjectReference Include="..\..\DeepCore\Gate.Client\Gate.Client.csproj" />
+		<ProjectReference Include="..\..\DeepCore\MMO.Client\MMO.Client.csproj" />
+		<ProjectReference Include="..\_Temp_.Battle\_Temp_.Battle.csproj" />
+		<ProjectReference Include="..\_Temp_.Client\_Temp_.Client.csproj" />
+		<ProjectReference Include="..\_Temp_.Codec\_Temp_.Codec.csproj" />
+		<ProjectReference Include="..\_Temp_.Tools.CLI\_Temp_.Tools.CLI.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Ben.Demystifier" Version="0.4.1" />
+		<PackageReference Include="NPOI" Version="2.7.6" />
+		<PackageReference Include="NAudio" Version="2.3.0" />
+		<PackageReference Include="NAudio.Extras" Version="2.3.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="10.0.5" />
+		<PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+		<PackageReference Include="System.Security.Permissions" Version="10.0.5" />
+		<PackageReference Include="System.Speech" Version="10.0.5" />
+		<PackageReference Include="System.Text.Encoding.CodePages" Version="10.0.5" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)'!='Source'">
+		<Reference Include="DeepGameEditor3D.Main">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.Main.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepGameEditor3D.MMO">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.MMO.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepGameEditor3D.MMOServer">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.MMOServer.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepGameEditor3D.Plugin3D">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.Plugin3D.dll</HintPath>
+		</Reference>
+		<Reference Include="DeepGameEditor3D.Unity3D">
+			<HintPath>..\..\DeepCore\.outputs\net9.0-windows\DeepGameEditor3D.Unity3D.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+
+	<ItemGroup Condition="'$(Configuration)'=='Source'">
+		<ProjectReference Include="..\..\DeepEditorMain\DeepGameEditor3D.Main\DeepGameEditor3D.Main.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepGameEditor3D.MMO\DeepGameEditor3D.MMO.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepGameEditor3D.MMOServer\DeepGameEditor3D.MMOServer.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepGameEditor3D.Plugin3D\DeepGameEditor3D.Plugin3D.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepGameEditor3D.Unity3D\DeepGameEditor3D.Unity3D.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepEditor.Common\DeepEditor.Common.csproj" />
+		<ProjectReference Include="..\..\DeepEditorMain\DeepMetaGame.Win32\DeepMetaGame.Win32.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Compile Update="Properties\Resource1.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resource1.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resource1.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<None Update="app.config">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="copyres.bat $(TargetDir)" />
+	</Target>
+</Project>

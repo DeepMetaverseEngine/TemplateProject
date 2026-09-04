@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net9.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Version>1.0.1</Version>
+
+		<Deterministic>true</Deterministic>
+
+		<Configurations>Debug;Release;Source</Configurations>
+	</PropertyGroup>
+	<PropertyGroup>
+		<WarningsAsErrors>$(WarningsAsErrors);NU1605;AsyncFixer03</WarningsAsErrors>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="lang\**" />
+		<Compile Remove="Metrics\**" />
+		<EmbeddedResource Remove="lang\**" />
+		<EmbeddedResource Remove="Metrics\**" />
+		<None Remove="lang\**" />
+		<None Remove="Metrics\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="TestMainLoop.bak.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="appsettings.json" />
+		<None Remove="supersocket.pfx" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="appsettings.wss.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="appsettings.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="supersocket.pfx">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="copyres.exclude.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AsyncFixer" Version="2.1.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Ben.Demystifier" Version="0.4.1" />
+		<PackageReference Include="PerfView.SupportFiles" Version="1.0.7" />
+		<PackageReference Include="prometheus-net" Version="8.2.1" />
+		<PackageReference Include="prometheus-net.DotNetRuntime" Version="4.4.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Event.Lua\DeepCore.Event.Lua.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Event\DeepCore.Event.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Geometry\DeepCore.Geometry.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.GUI\DeepCore.GUI.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.SharpZipLib\DeepCore.SharpZipLib.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Template.MoonSharp\DeepCore.Template.MoonSharp.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Template.NewtonJson\DeepCore.Template.NewtonJson.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore.Voxel\DeepCore.Voxel.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCore\DeepCore.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepCrystal\DeepCrystal.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Mysql\DeepFrozen.MySQL.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Redis\DeepFrozen.Redis.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.RPC.ICE\DeepFrozen.RPC.ICE.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.RPC\DeepFrozen.RPC.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Server.NetUV\DeepFrozen.Server.NetUV.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepFrozen.Server.SSocket2\DeepFrozen.Server.SSocket2.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepTools.DBLauncher\DeepTools.DBLauncher.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Data\DeepMetaGame.Data.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Host\DeepMetaGame.Host.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.Slave\DeepMetaGame.Slave.csproj" />
+		<ProjectReference Include="..\..\DeepCore\DeepMetaGame.ZoneServer\DeepMetaGame.ZoneServer.csproj" />
+		<ProjectReference Include="..\..\DeepCore\Gate.Client\Gate.Client.csproj" />
+		<ProjectReference Include="..\..\DeepCore\Gate.Data\Gate.Data.csproj" />
+		<ProjectReference Include="..\..\DeepCore\Gate.Server.Main\Gate.Server.Main.csproj" />
+		<ProjectReference Include="..\..\DeepCore\Gate.Server\Gate.Server.csproj" />
+		<ProjectReference Include="..\..\DeepCore\MMO.Client\MMO.Client.csproj" />
+		<ProjectReference Include="..\..\DeepCore\MMO.Server.Main\MMO.Server.Main.csproj" />
+		<ProjectReference Include="..\..\DeepCore\MMO.Server\MMO.Server.csproj" />
+		<ProjectReference Include="..\_Temp_.Battle\_Temp_.Battle.csproj" />
+		<ProjectReference Include="..\_Temp_.Client\_Temp_.Client.csproj" />
+		<ProjectReference Include="..\_Temp_.Codec\_Temp_.Codec.csproj" />
+		<ProjectReference Include="..\_Temp_.Protocol\_Temp_.Protocol.csproj" />
+		<ProjectReference Include="..\_Temp_.Server\_Temp_.Server.csproj" />
+		<ProjectReference Include="..\_Temp_.Service.Logic\_Temp_.Service.Logic.csproj" />
+
+	</ItemGroup>
+
+</Project>

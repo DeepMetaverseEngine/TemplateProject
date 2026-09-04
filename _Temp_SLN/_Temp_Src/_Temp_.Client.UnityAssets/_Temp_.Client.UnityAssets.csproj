@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<LangVersion>latest</LangVersion>
+		
+		<RunPostBuildEvent>Always</RunPostBuildEvent>
+		<Deterministic>true</Deterministic>
+		<Configurations>Debug;Release;Source</Configurations>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="JsonLoader\**" />
+	  <EmbeddedResource Remove="JsonLoader\**" />
+	  <None Remove="JsonLoader\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="copydll.exclude.unity.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="copydll.bat" />
+		<EmbeddedResource Include="copydll.exclude.txt" />
+		<EmbeddedResource Include="copydll.exclude.unity.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Event\DeepCore.Event.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Geometry\DeepCore.Geometry.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.GUI.Display\DeepCore.GUI.Display.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.GUI.FairyGUI\DeepCore.GUI.FairyGUI.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.GUI\DeepCore.GUI.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Net\DeepCore.Net.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Template.NewtonJson\DeepCore.Template.NewtonJson.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Unity.Assets\DeepCore.Unity.Assets.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Unity.GUI\DeepCore.Unity.GUI.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Unity3D.Win32\DeepCore.Unity3D.Win32.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Unity3D\DeepCore.Unity3D.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.UnityEditor\DeepCore.UnityEditor.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore.Unity\DeepCore.Unity.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepCore\DeepCore.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.Data\DeepMetaGame.Data.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.Display\DeepMetaGame.Display.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.Host\DeepMetaGame.Host.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.Slave\DeepMetaGame.Slave.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.UnityAssets\DeepMetaGame.UnityAssets.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.UnityPreview\DeepMetaGame.UnityPreview.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\DeepMetaGame.Unity\DeepMetaGame.Unity.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\Gate.Client\Gate.Client.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\Gate.Data\Gate.Data.csproj" />
+	  <ProjectReference Include="..\..\DeepCore\MMO.Client\MMO.Client.csproj" />
+	  <ProjectReference Include="..\_Temp_.Battle\_Temp_.Battle.csproj" />
+	  <ProjectReference Include="..\_Temp_.Client.UnityPreview\_Temp_.Client.UnityPreview.csproj" />
+	  <ProjectReference Include="..\_Temp_.Client.Unity\_Temp_.Client.Unity.csproj" />
+	  <ProjectReference Include="..\_Temp_.Client\_Temp_.Client.csproj" />
+	  <ProjectReference Include="..\_Temp_.Codec\_Temp_.Codec.csproj" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="copydll.bat $(TargetDir)" />
+	</Target>
+
+</Project>

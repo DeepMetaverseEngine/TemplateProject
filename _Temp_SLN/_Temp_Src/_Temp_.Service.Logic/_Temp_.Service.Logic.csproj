@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.0.1</Version>
+    <LangVersion>latest</LangVersion>
+	  <Deterministic>true</Deterministic>
+	  <Configurations>Debug;Release;Source</Configurations>
+  </PropertyGroup>
+	<PropertyGroup>
+		<WarningsAsErrors>$(WarningsAsErrors);NU1605;AsyncFixer03</WarningsAsErrors>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <Compile Remove="Modules\TinyBag\**" />
+    <EmbeddedResource Remove="Modules\TinyBag\**" />
+    <None Remove="Modules\TinyBag\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Modules\BagModule.cs" />
+    <Compile Remove="Modules\BagModule.Extensions.cs" />
+    <Compile Remove="Modules\BagModule.OP.cs" />
+  </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="AsyncFixer" Version="2.1.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+    <PackageReference Include="Ben.Demystifier" Version="0.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DeepCore\DeepCore\DeepCore.csproj" />
+    <ProjectReference Include="..\..\DeepCore\DeepCrystal\DeepCrystal.csproj" />
+    <ProjectReference Include="..\..\DeepCore\Gate.Data\Gate.Data.csproj" />
+    <ProjectReference Include="..\..\DeepCore\Gate.Server\Gate.Server.csproj" />
+    <ProjectReference Include="..\..\DeepCore\MMO.Server\MMO.Server.csproj" />
+    <ProjectReference Include="..\_Temp_.Battle\_Temp_.Battle.csproj" />
+    <ProjectReference Include="..\_Temp_.Codec\_Temp_.Codec.csproj" />
+    <ProjectReference Include="..\_Temp_.Server\_Temp_.Server.csproj" />
+  </ItemGroup>
+</Project>
