@@ -1,0 +1,23 @@
+{
+    "name": "DeepCore.Unity.Assets",
+    "rootNamespace": "",
+    "references": [
+        "UniTask",
+        "YooAsset",
+        "spine-unity",
+        "colyseus.nativewebsocket"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "DeepCore.dll",
+        "DeepCore.Geometry.dll",
+        "DeepCore.GUI.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

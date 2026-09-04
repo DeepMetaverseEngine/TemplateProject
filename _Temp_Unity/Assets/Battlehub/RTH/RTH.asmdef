@@ -1,0 +1,24 @@
+{
+    "name": "RTH",
+    "rootNamespace": "",
+    "references": [
+        "Battlehub.RTEditor",
+        "Battlehub.RTEditor.URP",
+        "Unity.TextMeshPro",
+        "Hotfix",
+        "DeepCore.Unity.Assets"
+    ],
+    "includePlatforms": [
+        "Editor",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
