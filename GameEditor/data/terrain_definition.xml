@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.Misc.TerrainDefinitionMap" Comment="地块定义信息">
+  <Brushes element_type="DeepMetaGame.Data.Misc.TerrainDefinitionMap+MapBlockBrush" Comment="地块定义列表">
+    <element>
+      <Desc Comment="注释"></Desc>
+      <Flag Comment="地图颜色标记">NA</Flag>
+      <Name Comment="名字">NA</Name>
+      <Tag Comment="Tag"></Tag>
+      <Value Comment="颜色值ARGB">0</Value>
+    </element>
+    <element>
+      <Desc Comment="注释"></Desc>
+      <Flag Comment="地图颜色标记">Block</Flag>
+      <Name Comment="名字">Block</Name>
+      <Tag Comment="Tag"></Tag>
+      <Value Comment="颜色值ARGB">-16711936</Value>
+    </element>
+    <element>
+      <Desc Comment="注释"></Desc>
+      <Flag Comment="地图颜色标记">Safe</Flag>
+      <Name Comment="名字">Safe</Name>
+      <Tag Comment="Tag"></Tag>
+      <Value Comment="颜色值ARGB">-12566464</Value>
+    </element>
+  </Brushes>
+</data>

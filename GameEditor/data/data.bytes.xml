@@ -1,0 +1,2998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.ZoneEditor.EditorTemplatesMeta">
+  <Auras key_type="System.Int32" value_type="DeepMetaGame.Data.Template.AuraTemplate" Comment="光环" />
+  <BattleDataCenter>
+    <AppendData IsNull="true" />
+    <Tables key_type="System.String" value_type="DeepCore.TableBaseMeta" />
+  </BattleDataCenter>
+  <BattleUIs key_type="System.Int32" value_type="DeepMetaGame.Data.Template.BattleUITemplate" Comment="界面" />
+  <Buffs key_type="System.Int32" value_type="DeepMetaGame.Data.Template.BuffTemplate" Comment="BUFF类数据结构" />
+  <CardAffects>
+    <CardToTemplates key_type="System.Int32" value_type="DeepCore.HashMap`2[[System.Type],[System.Collections.Generic.List`1[[System.Int32]]]]" />
+    <TemplatesToCard key_type="System.Type" value_type="DeepCore.HashMap`2[[System.Int32],[System.Collections.Generic.List`1[[System.Int32]]]]" />
+  </CardAffects>
+  <Cards key_type="System.Int32" value_type="DeepMetaGame.Data.Template.CardTemplate" Comment="词缀功能" />
+  <DefaultConfig>
+    <AI_FIND_PATH_STEP_LIMIT Comment="寻路步长限制">1000</AI_FIND_PATH_STEP_LIMIT>
+    <AI_FOLLOW_AND_ATTACK_ADJUST_ESCAPE_ANGLE Comment="尝试追击过程中，调整射击范围(反向弧度)">1</AI_FOLLOW_AND_ATTACK_ADJUST_ESCAPE_ANGLE>
+    <AI_FOLLOW_AND_ATTACK_ADJUST_ESCAPE_PCT Comment="尝试追击过程中，调整射击范围(逃离)的比率">50</AI_FOLLOW_AND_ATTACK_ADJUST_ESCAPE_PCT>
+    <AI_FOLLOW_AND_ATTACK_HOLD_TIME_MS Comment="每隔一段时间检测一下是否要追(防止抖动)">1000</AI_FOLLOW_AND_ATTACK_HOLD_TIME_MS>
+    <AI_HATE_SYSTEM_CAPACITY Comment="仇恨列表上限">10</AI_HATE_SYSTEM_CAPACITY>
+    <AI_HATE_SYSTEM_ENTER_VIEW_HATE_VALUE Comment="视野仇恨值">1</AI_HATE_SYSTEM_ENTER_VIEW_HATE_VALUE>
+    <AI_MOVE_AI_BYPASS_SCALE Comment="移动过程中绕过体积尺寸">2</AI_MOVE_AI_BYPASS_SCALE>
+    <AI_MOVE_AI_HOLD_TIME_MS Comment="移动过程中每次AI变化的停顿时间">1000</AI_MOVE_AI_HOLD_TIME_MS>
+    <AI_MOVE_FIRST_FIND_PATH Comment="首次移动就寻路">False</AI_MOVE_FIRST_FIND_PATH>
+    <AI_MOVE_NOWAY_HOLD_TIME_MS Comment="移动过程中走不动时等待时间">1000</AI_MOVE_NOWAY_HOLD_TIME_MS>
+    <AI_NPC_ATTACK_IDLE_SCATTER_PCT Comment="NPC攻击间歇时，有多少几率检测旁边有人，并散开，防止堆积在一个点。（百分比）">25</AI_NPC_ATTACK_IDLE_SCATTER_PCT>
+    <AI_NPC_CHECK_IN_GUARD_LIMIT_TIME_MS Comment="NPC每隔多长毫秒检测一次最大警戒距离">500</AI_NPC_CHECK_IN_GUARD_LIMIT_TIME_MS>
+    <AI_VIEW_TRIGGER_CHECK_TIME_MS Comment="观察一定范围的触发器，固定时间固定检测周围变化">1000</AI_VIEW_TRIGGER_CHECK_TIME_MS>
+    <CLIENT_SYNC_UNIT_MAX_RANGE Comment="单位出视野范围">25</CLIENT_SYNC_UNIT_MAX_RANGE>
+    <CLIENT_SYNC_UNIT_MIN_RANGE Comment="单位进视野范围">20</CLIENT_SYNC_UNIT_MIN_RANGE>
+    <CLIENT_UNIT_MOVE_MODIFY_MAX_RANGE Comment="超出此同步范围，立即将坐标修正">20</CLIENT_UNIT_MOVE_MODIFY_MAX_RANGE>
+    <CLIENT_UNIT_MOVE_MODIFY_MIN_RANGE Comment="在此范围内，可允许误差">2</CLIENT_UNIT_MOVE_MODIFY_MIN_RANGE>
+    <CLIENT_UPDATE_LOOK_IN_INTERVAL_MS Comment="客户端多久检测一次进入视野">1000</CLIENT_UPDATE_LOOK_IN_INTERVAL_MS>
+    <CLIENT_UPDATE_LOOK_OUT_INTERVAL_MS Comment="客户端多久检测一次进入视野">1000</CLIENT_UPDATE_LOOK_OUT_INTERVAL_MS>
+    <DEFAULT_SCENE Comment="默认场景">0</DEFAULT_SCENE>
+    <DEFAULT_UNIT Comment="默认角色">0</DEFAULT_UNIT>
+    <ENABLE_PERFORMANCE_TRACE Comment="是否开启性能追踪">False</ENABLE_PERFORMANCE_TRACE>
+    <ENABLE_SHOW_ERROR_MSG_BOX Comment="是否开启异常弹框">False</ENABLE_SHOW_ERROR_MSG_BOX>
+    <FuncID IsNull="true" />
+    <GLOBAL_GRAVITY Comment="全局重力">9.8</GLOBAL_GRAVITY>
+    <GLOBAL_MOVE_IMPACT_DEPTH Comment="全局挤开移动最大递归深度">10</GLOBAL_MOVE_IMPACT_DEPTH>
+    <MONITOR_WARNING_THRESHOLDMS Comment="执行时间触发警报阈值">9</MONITOR_WARNING_THRESHOLDMS>
+    <OBJECT_DAMAGE_FLY_ARGS_FACTOR_PCT Comment="单位被击飞各项参数浮动值百分比">0</OBJECT_DAMAGE_FLY_ARGS_FACTOR_PCT>
+    <OBJECT_DAMAGE_FLY_SPEED_ACC Comment="单位被击飞阻力(每秒递减速度百分比)">0</OBJECT_DAMAGE_FLY_SPEED_ACC>
+    <OBJECT_DAMAGE_FLY_SPEED_ADD Comment="单位被击飞加速度(距离/秒) =&gt; (速度=速度+加速度)">0</OBJECT_DAMAGE_FLY_SPEED_ADD>
+    <OBJECT_DAMAGE_FLY_SPEED_SEC Comment="单位被击飞速度(距离/秒)">10</OBJECT_DAMAGE_FLY_SPEED_SEC>
+    <OBJECT_DAMAGE_FLY_ZSPEED_SEC Comment="单位被击飞向上速度">10</OBJECT_DAMAGE_FLY_ZSPEED_SEC>
+    <OBJECT_DAMAGE_TIME_MS Comment="单位受击时间(毫秒)">1000</OBJECT_DAMAGE_TIME_MS>
+    <OBJECT_MOVE_BLOCK_ELASTIC_ANGLE Comment="单位被单位阻挡，多少角度开始挤开（角度）">10</OBJECT_MOVE_BLOCK_ELASTIC_ANGLE>
+    <OBJECT_MOVE_TO_MIN_STEP_SEC Comment="单位移动最慢速度(低于最慢速度表示不能移动)">0.3</OBJECT_MOVE_TO_MIN_STEP_SEC>
+    <OBJECT_NONE_TOUCH Comment="单位间无碰撞总开关">False</OBJECT_NONE_TOUCH>
+    <PET_FOLLOW_DISTANCE_LIMIT_ADD Comment="宠物强制跟随距离（距离太远，直接瞬移到主人）">10</PET_FOLLOW_DISTANCE_LIMIT_ADD>
+    <PET_FOLLOW_DISTANCE_MAX_ADD Comment="宠物跟随距离（离主人多远时跟随）">1</PET_FOLLOW_DISTANCE_MAX_ADD>
+    <PET_FOLLOW_DISTANCE_MIN Comment="宠物跟随距离（靠近主人多少停止）">2</PET_FOLLOW_DISTANCE_MIN>
+    <PLAYER_NONE_TOUCH Comment="玩家无碰撞">False</PLAYER_NONE_TOUCH>
+    <PREVIEW_SCENE Comment="预览场景">10000</PREVIEW_SCENE>
+    <RESOURCE_EXTENSIONS Comment="资源后缀">.ab|.assetbundle|.png|.jpg|.mp3|.ogg|.cpj</RESOURCE_EXTENSIONS>
+    <SPACE_UPDATE_NEAR_PLAYER_INTERVAL Comment="更新附近玩家间隔">3000</SPACE_UPDATE_NEAR_PLAYER_INTERVAL>
+    <SPACE_UPDATE_NEAR_PLAYER_RANGE Comment="更新附近玩家距离">1</SPACE_UPDATE_NEAR_PLAYER_RANGE>
+    <SYSTEM_FPS Comment="系统帧率（服务端）">30</SYSTEM_FPS>
+    <TABLE_EXTENSIONS Comment="表格后缀">.xls|.xlsx|.json|.lua</TABLE_EXTENSIONS>
+    <UNIT_AI_INTERVAL_MS Comment="单位AI更新时间(毫秒)，0表示每帧更新">0</UNIT_AI_INTERVAL_MS>
+    <UNIT_CAN_WHIPLASH_BODY Comment="单位允许被鞭尸">False</UNIT_CAN_WHIPLASH_BODY>
+    <UNIT_ERROR_RECYCLE_THRESHOLD Comment="单位错误触发回收阈值">3</UNIT_ERROR_RECYCLE_THRESHOLD>
+    <UNIT_TURN_SPEED_SEC Comment="单位默认转身速度（弧度/秒）">3.14</UNIT_TURN_SPEED_SEC>
+  </DefaultConfig>
+  <DefaultExtCFG type="_Temp_.Battle.Data.Properties._Temp_CFG" Comment="_Temp_Config">
+    <FuncID IsNull="true" />
+  </DefaultExtCFG>
+  <DefaultTerrainDefinitions>
+    <Brushes element_type="DeepMetaGame.Data.Misc.TerrainDefinitionMap+MapBlockBrush" Comment="地块定义列表">
+      <element>
+        <Desc Comment="注释"></Desc>
+        <Flag Comment="地图颜色标记">NA</Flag>
+        <Name Comment="名字">NA</Name>
+        <Tag Comment="Tag"></Tag>
+        <Value Comment="颜色值ARGB">0</Value>
+      </element>
+      <element>
+        <Desc Comment="注释"></Desc>
+        <Flag Comment="地图颜色标记">Block</Flag>
+        <Name Comment="名字">Block</Name>
+        <Tag Comment="Tag"></Tag>
+        <Value Comment="颜色值ARGB">-16711936</Value>
+      </element>
+      <element>
+        <Desc Comment="注释"></Desc>
+        <Flag Comment="地图颜色标记">Safe</Flag>
+        <Name Comment="名字">Safe</Name>
+        <Tag Comment="Tag"></Tag>
+        <Value Comment="颜色值ARGB">-12566464</Value>
+      </element>
+    </Brushes>
+  </DefaultTerrainDefinitions>
+  <DefaultUnitActionDefinitions>
+    <ActionMap element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitAction" Comment="动作集合">
+      <element>
+        <Action Comment="动作">Idle</Action>
+        <ActionQueue element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame" Comment="动作序列">
+          <element>
+            <ActionEffect IsNull="true" />
+            <ActionParams element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Param" Comment="动作参数">
+              <element>
+                <FloatValue>0</FloatValue>
+                <ParamName>Speed_f</ParamName>
+                <ValueType>Float</ValueType>
+              </element>
+            </ActionParams>
+            <ActionTriggers element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Trigger" Comment="动作触发器" />
+            <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+              <FuncID IsNull="true" />
+            </CustomAction>
+            <Cycle Comment="是否循环">True</Cycle>
+            <DefaultState Comment="默认状态">
+              <CrossFadeTimeMS Comment="是否淡出">0</CrossFadeTimeMS>
+              <LayerName Comment="动作分层">Movement</LayerName>
+              <LayerWeight Comment="动作分层权重">1</LayerWeight>
+              <StateName Comment="动作名">Idle</StateName>
+            </DefaultState>
+            <RepeatCount Comment="循环播几次">0</RepeatCount>
+            <SoundName IsNull="true" />
+            <Speed Comment="播放速度">1</Speed>
+            <SubStateKey IsNull="true" />
+            <SubStates element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Layer" Comment="分层状态" />
+            <Tag Comment="Tag"></Tag>
+            <TimeMS Comment="播放时间（如果多段动作，则需要指定每段时间）">1000</TimeMS>
+          </element>
+        </ActionQueue>
+        <CustomResource IsNull="true" />
+        <CustomResourceOverride Comment="自定义的模型是否覆盖本体">False</CustomResourceOverride>
+        <SubState IsNull="true" />
+      </element>
+      <element>
+        <Action Comment="动作">Move</Action>
+        <ActionQueue element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame" Comment="动作序列">
+          <element>
+            <ActionEffect IsNull="true" />
+            <ActionParams element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Param" Comment="动作参数">
+              <element>
+                <FloatValue>1</FloatValue>
+                <ParamName>Speed_f</ParamName>
+                <ValueType>Float</ValueType>
+              </element>
+            </ActionParams>
+            <ActionTriggers element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Trigger" Comment="动作触发器" />
+            <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+              <FuncID IsNull="true" />
+            </CustomAction>
+            <Cycle Comment="是否循环">True</Cycle>
+            <DefaultState Comment="默认状态">
+              <CrossFadeTimeMS Comment="是否淡出">0</CrossFadeTimeMS>
+              <LayerName Comment="动作分层">Movement</LayerName>
+              <LayerWeight Comment="动作分层权重">1</LayerWeight>
+              <StateName Comment="动作名">Run</StateName>
+            </DefaultState>
+            <RepeatCount Comment="循环播几次">0</RepeatCount>
+            <SoundName IsNull="true" />
+            <Speed Comment="播放速度">1</Speed>
+            <SubStateKey IsNull="true" />
+            <SubStates element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Layer" Comment="分层状态" />
+            <Tag Comment="Tag"></Tag>
+            <TimeMS Comment="播放时间（如果多段动作，则需要指定每段时间）">1000</TimeMS>
+          </element>
+        </ActionQueue>
+        <CustomResource IsNull="true" />
+        <CustomResourceOverride Comment="自定义的模型是否覆盖本体">False</CustomResourceOverride>
+        <SubState IsNull="true" />
+      </element>
+    </ActionMap>
+  </DefaultUnitActionDefinitions>
+  <GlobalCFG type="_Temp_.Battle.Data.Properties._Temp_Global" Comment="_Temp_Global" />
+  <Items key_type="System.Int32" value_type="DeepMetaGame.Data.Template.ItemTemplate" Comment="掉落道具类数据结构" />
+  <ResourcePropertiesMap>
+    <PropertiesMap key_type="System.String" value_type="DeepMetaGame.Data.IResourceProperties" />
+  </ResourcePropertiesMap>
+  <ResourceVersion>ca0505195e9fb5bee4c20ab27f156967</ResourceVersion>
+  <Skills key_type="System.Int32" value_type="DeepMetaGame.Data.Template.SkillTemplate" Comment="技能模板">
+    <element>
+      <key>10001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.ISkillTemplateAbility" Comment="能力" />
+        <ActionPriority Comment="技能优先级，高优先级可打断低优先级">0</ActionPriority>
+        <ActionQueue element_type="DeepMetaGame.Data.Template.UnitActionData" Comment="攻击动作序列">
+          <element />
+        </ActionQueue>
+        <ActionSpeedRate Comment="动作播放速率">1</ActionSpeedRate>
+        <AttackBodyTouchRange Comment="技能和目标的保持距离">0</AttackBodyTouchRange>
+        <AttackFollowRange Comment="追踪状态单位开始攻击距离(必须小于技能攻击范围)，大于0起效">0</AttackFollowRange>
+        <AttackKeepRange Comment="保持攻击距离（NPC会保持一段距离再攻击）大于0启效">0</AttackKeepRange>
+        <AttackMustBeInRange Comment="单体攻击，只在目标处于攻击范围才产生伤害">True</AttackMustBeInRange>
+        <AttackShape Comment="攻击范围">
+          <AShape Comment="攻击范围类型">Fan</AShape>
+          <AttackAngle Comment="弧度（Fan）">0.7853982</AttackAngle>
+          <AttackRange Comment="半径（Round, Fan, Circle）长度(Strip, StripRay，StripRayTouchEnd, RectStrip, RectStripRay, LineToTarget, WideStrip)">3</AttackRange>
+          <FuncID IsNull="true" />
+          <OffsetRadius Comment="初始点半径偏移">0</OffsetRadius>
+        </AttackShape>
+        <Attributes IsNull="true" />
+        <BodyScale Comment="技能释放期间，模型缩放（仅客户端有效）">1</BodyScale>
+        <CastEffect IsNull="true" />
+        <ChantTimeMS Comment="吟唱时间（毫秒）大于0启效">0</ChantTimeMS>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CoolDownMS Comment="技能冷却时间(毫秒)">1000</CoolDownMS>
+        <CostHP Comment="释放消耗血量">0</CostHP>
+        <CostMP Comment="释放消耗法力">0</CostMP>
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <EditorPath Comment=""></EditorPath>
+        <ExpectTarget Comment="技能期望作用目标">Enemy</ExpectTarget>
+        <FuncID IsNull="true" />
+        <IconName IsNull="true" />
+        <ID Comment="ID">10001</ID>
+        <IsCoolDownWithAction Comment="以动作时间作为冷却时间">False</IsCoolDownWithAction>
+        <IsCounter Comment="可以打断其他技能和受击状态，受身技能">False</IsCounter>
+        <IsLaunchBody Comment="法术是否从自己身上发出">True</IsLaunchBody>
+        <IsManuallyCancelable Comment="技能释放期间，可手动撤销（取消旋风斩动作）">False</IsManuallyCancelable>
+        <IsSelectRange Comment="释放时是否选择方向">False</IsSelectRange>
+        <IsShowIndicator Comment="是否显示指示器">False</IsShowIndicator>
+        <IsSingleAction Comment="每次释放只做一个动作，多段攻击">False</IsSingleAction>
+        <Name Comment="名字">近战扇形判定技能</Name>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_SkillProperties" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <SkillLaunchMode IsNull="true" />
+        <UserTag IsNull="true" />
+      </value>
+    </element>
+    <element>
+      <key>10002</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.ISkillTemplateAbility" Comment="能力" />
+        <ActionPriority Comment="技能优先级，高优先级可打断低优先级">0</ActionPriority>
+        <ActionQueue element_type="DeepMetaGame.Data.Template.UnitActionData" Comment="攻击动作序列">
+          <element />
+        </ActionQueue>
+        <ActionSpeedRate Comment="动作播放速率">1</ActionSpeedRate>
+        <AttackBodyTouchRange Comment="技能和目标的保持距离">0</AttackBodyTouchRange>
+        <AttackFollowRange Comment="追踪状态单位开始攻击距离(必须小于技能攻击范围)，大于0起效">0</AttackFollowRange>
+        <AttackKeepRange Comment="保持攻击距离（NPC会保持一段距离再攻击）大于0启效">0</AttackKeepRange>
+        <AttackMustBeInRange Comment="单体攻击，只在目标处于攻击范围才产生伤害">True</AttackMustBeInRange>
+        <AttackShape Comment="攻击范围">
+          <AShape Comment="攻击范围类型">Fan</AShape>
+          <AttackAngle Comment="弧度（Fan）">0.7853982</AttackAngle>
+          <AttackRange Comment="半径（Round, Fan, Circle）长度(Strip, StripRay，StripRayTouchEnd, RectStrip, RectStripRay, LineToTarget, WideStrip)">3</AttackRange>
+          <FuncID IsNull="true" />
+          <OffsetRadius Comment="初始点半径偏移">0</OffsetRadius>
+        </AttackShape>
+        <Attributes IsNull="true" />
+        <BodyScale Comment="技能释放期间，模型缩放（仅客户端有效）">1</BodyScale>
+        <CastEffect IsNull="true" />
+        <ChantTimeMS Comment="吟唱时间（毫秒）大于0启效">0</ChantTimeMS>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CoolDownMS Comment="技能冷却时间(毫秒)">1000</CoolDownMS>
+        <CostHP Comment="释放消耗血量">0</CostHP>
+        <CostMP Comment="释放消耗法力">0</CostMP>
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <EditorPath Comment=""></EditorPath>
+        <ExpectTarget Comment="技能期望作用目标">Enemy</ExpectTarget>
+        <FuncID IsNull="true" />
+        <IconName IsNull="true" />
+        <ID Comment="ID">10002</ID>
+        <IsCoolDownWithAction Comment="以动作时间作为冷却时间">False</IsCoolDownWithAction>
+        <IsCounter Comment="可以打断其他技能和受击状态，受身技能">False</IsCounter>
+        <IsLaunchBody Comment="法术是否从自己身上发出">True</IsLaunchBody>
+        <IsManuallyCancelable Comment="技能释放期间，可手动撤销（取消旋风斩动作）">False</IsManuallyCancelable>
+        <IsSelectRange Comment="释放时是否选择方向">False</IsSelectRange>
+        <IsShowIndicator Comment="是否显示指示器">False</IsShowIndicator>
+        <IsSingleAction Comment="每次释放只做一个动作，多段攻击">False</IsSingleAction>
+        <Name Comment="名字">近战扇形判定技能</Name>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_SkillProperties" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <SkillLaunchMode IsNull="true" />
+        <UserTag IsNull="true" />
+      </value>
+    </element>
+    <element>
+      <key>10003</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.ISkillTemplateAbility" Comment="能力" />
+        <ActionPriority Comment="技能优先级，高优先级可打断低优先级">0</ActionPriority>
+        <ActionQueue element_type="DeepMetaGame.Data.Template.UnitActionData" Comment="攻击动作序列">
+          <element>
+            <Action Comment="动作">
+              <ActionEffect IsNull="true" />
+              <ActionParams element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Param" Comment="动作参数" />
+              <ActionTriggers element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Trigger" Comment="动作触发器" />
+              <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+                <FuncID IsNull="true" />
+              </CustomAction>
+              <Cycle Comment="是否循环">True</Cycle>
+              <DefaultState Comment="默认状态">
+                <CrossFadeTimeMS Comment="是否淡出">0</CrossFadeTimeMS>
+                <LayerName IsNull="true" />
+                <LayerWeight Comment="动作分层权重">-1</LayerWeight>
+                <StateName Comment="动作名">Idle</StateName>
+              </DefaultState>
+              <RepeatCount Comment="循环播几次">0</RepeatCount>
+              <SoundName IsNull="true" />
+              <Speed Comment="播放速度">1</Speed>
+              <SubStateKey IsNull="true" />
+              <SubStates element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Layer" Comment="分层状态" />
+              <Tag Comment="Tag"></Tag>
+              <TimeMS Comment="播放时间（如果多段动作，则需要指定每段时间）">100</TimeMS>
+            </Action>
+            <ActionEffect IsNull="true" />
+            <BodyBlockOnAttackRange Comment="在攻击范围内，如果位移则挤开目标">True</BodyBlockOnAttackRange>
+            <BodyHit IsNull="true" />
+            <FuncID IsNull="true" />
+            <IsCancelable Comment="移动可取消动作">False</IsCancelable>
+            <IsCancelableBySkill Comment="技能可取消动作">False</IsCancelableBySkill>
+            <IsControlFaceable Comment="动作中可以控制转向">False</IsControlFaceable>
+            <IsControlMoveable Comment="动作中是否可以控制移动">False</IsControlMoveable>
+            <IsFaceToTarget Comment="动作中是否面向目标">False</IsFaceToTarget>
+            <IsInvisible Comment="动作是否隐身">False</IsInvisible>
+            <IsJumpLockTarget Comment="跳跃锁定目标，目标必须在攻击范围内">False</IsJumpLockTarget>
+            <IsJumpToTarget Comment="(冲锋)：移动到目标根据(距离/动作时间)来算速度，如果目标在原地，则原地跳跃。">False</IsJumpToTarget>
+            <IsMoveToTarget Comment="(冲锋)：移动到目标。">False</IsMoveToTarget>
+            <IsMoveToTargetStopAction Comment="冲锋或跳跃到目标时是否立即结束当前动作">False</IsMoveToTargetStopAction>
+            <IsNoneBlock Comment="是否进入霸体状态，不会被打断">False</IsNoneBlock>
+            <IsNoneTouch Comment="动作期间是否无碰撞">False</IsNoneTouch>
+            <KeyFrames element_type="DeepMetaGame.Data.Template.UnitActionData+KeyFrame" Comment="所有关键帧">
+              <element>
+                <Attack IsNull="true" />
+                <Blink IsNull="true" />
+                <ChangeStatus IsNull="true" />
+                <ChangeTarget IsNull="true" />
+                <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+                  <FuncID IsNull="true" />
+                </CustomAction>
+                <Effect IsNull="true" />
+                <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+                <FuncID IsNull="true" />
+                <Move IsNull="true" />
+                <SelfAura IsNull="true" />
+                <SelfBuff IsNull="true" />
+                <Spell Comment="关键帧产生的法术或远程道具单位模板ID">
+                  <ChainLevel Comment="连锁等级，只在技能中LaunchSpell有效（闪电链类数量，如果Spell launch spell ID一致，则传递此值）如果为0，则不传递相同的Spell。">0</ChainLevel>
+                  <FinalChainSpell IsNull="true" />
+                  <FromSpellMagnitude Comment="Spell发射Straight Spell时，是否传递速度权重(Normal and Speed)">False</FromSpellMagnitude>
+                  <FromUnitBody Comment="填True，下面无效，发射口是否以单位炮口作为参考">True</FromUnitBody>
+                  <FuncID IsNull="true" />
+                  <InheritDamageTargetList Comment="弹射类子弹忽略弹射本体">False</InheritDamageTargetList>
+                  <IsAutoSeekingTarget Comment="自动锁定范围内目标">False</IsAutoSeekingTarget>
+                  <LaunchPercent Comment="触发百分比">100</LaunchPercent>
+                  <mSN>23</mSN>
+                  <PType Comment="触发新的法术运行方式">POS_TYPE_DEFAULT_SINGLE</PType>
+                  <RandomAngle Comment="随机角度">0</RandomAngle>
+                  <RepeatCount Comment="连续触发次数">0</RepeatCount>
+                  <RepeatIntervalMS Comment="连续触发间距">100</RepeatIntervalMS>
+                  <ResetSeekingTarget IsNull="true" />
+                  <SenderUnit Comment="发射者">Sender</SenderUnit>
+                  <SpellID Comment="触发新的法术">10001</SpellID>
+                  <SpellLevel Comment="法术等级">0</SpellLevel>
+                  <StartAngle Comment="发射初始弧度">0</StartAngle>
+                  <StartDirection Comment="法术起始方向">FaceToTarget</StartDirection>
+                  <SubSpells IsNull="true" />
+                </Spell>
+                <Summon IsNull="true" />
+              </element>
+            </KeyFrames>
+            <MoveToTargetSpeedSEC Comment="移动到目标速度">10</MoveToTargetSpeedSEC>
+            <OverrideAttackShape IsNull="true" />
+            <TargetOffset Comment="位移到目标位偏移量">0</TargetOffset>
+            <TargetPos Comment="位移到目标位置">Body</TargetPos>
+            <TriggerNextActionWaitTimeMS Comment="可触发下一段攻击的等待时间（毫秒）">0</TriggerNextActionWaitTimeMS>
+          </element>
+        </ActionQueue>
+        <ActionSpeedRate Comment="动作播放速率">1</ActionSpeedRate>
+        <AttackBodyTouchRange Comment="技能和目标的保持距离">0</AttackBodyTouchRange>
+        <AttackFollowRange Comment="追踪状态单位开始攻击距离(必须小于技能攻击范围)，大于0起效">0</AttackFollowRange>
+        <AttackKeepRange Comment="保持攻击距离（NPC会保持一段距离再攻击）大于0启效">0</AttackKeepRange>
+        <AttackMustBeInRange Comment="单体攻击，只在目标处于攻击范围才产生伤害">True</AttackMustBeInRange>
+        <AttackShape Comment="攻击范围">
+          <AShape Comment="攻击范围类型">Fan</AShape>
+          <AttackAngle Comment="弧度（Fan）">0.7853982</AttackAngle>
+          <AttackRange Comment="半径（Round, Fan, Circle）长度(Strip, StripRay，StripRayTouchEnd, RectStrip, RectStripRay, LineToTarget, WideStrip)">15</AttackRange>
+          <FuncID IsNull="true" />
+          <OffsetRadius Comment="初始点半径偏移">0</OffsetRadius>
+        </AttackShape>
+        <Attributes IsNull="true" />
+        <BodyScale Comment="技能释放期间，模型缩放（仅客户端有效）">1</BodyScale>
+        <CastEffect IsNull="true" />
+        <ChantTimeMS Comment="吟唱时间（毫秒）大于0启效">0</ChantTimeMS>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CoolDownMS Comment="技能冷却时间(毫秒)">200</CoolDownMS>
+        <CostHP Comment="释放消耗血量">0</CostHP>
+        <CostMP Comment="释放消耗法力">0</CostMP>
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <EditorPath Comment=""></EditorPath>
+        <ExpectTarget Comment="技能期望作用目标">Enemy</ExpectTarget>
+        <FuncID IsNull="true" />
+        <IconName IsNull="true" />
+        <ID Comment="ID">10003</ID>
+        <IsCoolDownWithAction Comment="以动作时间作为冷却时间">False</IsCoolDownWithAction>
+        <IsCounter Comment="可以打断其他技能和受击状态，受身技能">False</IsCounter>
+        <IsLaunchBody Comment="法术是否从自己身上发出">True</IsLaunchBody>
+        <IsManuallyCancelable Comment="技能释放期间，可手动撤销（取消旋风斩动作）">False</IsManuallyCancelable>
+        <IsSelectRange Comment="释放时是否选择方向">False</IsSelectRange>
+        <IsShowIndicator Comment="是否显示指示器">False</IsShowIndicator>
+        <IsSingleAction Comment="每次释放只做一个动作，多段攻击">False</IsSingleAction>
+        <Name Comment="名字">发射子弹技能</Name>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_SkillProperties" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <SkillLaunchMode IsNull="true" />
+        <UserTag IsNull="true" />
+      </value>
+    </element>
+  </Skills>
+  <Spells key_type="System.Int32" value_type="DeepMetaGame.Data.Template.SpellTemplate" Comment="法术/飞行道具模板">
+    <element>
+      <key>10001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.ISpellTemplateAbility" Comment="能力" />
+        <Attributes IsNull="true" />
+        <BindingEffect IsNull="true" />
+        <BodyHeight Comment="法术自身高度">0.2</BodyHeight>
+        <BodyHitVoxelAnchor Comment="法术判定范围对齐方式">NA</BodyHitVoxelAnchor>
+        <BodyShape Comment="攻击范围类型">Round</BodyShape>
+        <BodySize Comment="尺寸，半径（Round, Fan, Circle）">0.1</BodySize>
+        <BodyVoxelAnchor Comment="法术高度对齐方式">Floating</BodyVoxelAnchor>
+        <BonesBegin IsNull="true" />
+        <BonesEnd IsNull="true" />
+        <CleanHitIntervalMS Comment="多长时间可以再次造成伤害">0</CleanHitIntervalMS>
+        <ClientVisible Comment="客户端是否可见">True</ClientVisible>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <DestoryEffect IsNull="true" />
+        <DestoryTimeMS Comment="销毁时间(毫秒)，延迟移除">0</DestoryTimeMS>
+        <EditorPath Comment=""></EditorPath>
+        <ExpectTarget Comment="法术期望作用目标">Enemy</ExpectTarget>
+        <FileBodyScale Comment="缩放比率">1</FileBodyScale>
+        <FileName Comment="模型名字或者Perfab名字">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/FX/FX_Bullet_Trail_Mesh.prefab</FileName>
+        <FileNameDestory IsNull="true" />
+        <FileNameSpawn IsNull="true" />
+        <FilterAffect Comment="过滤范围内目标">Random</FilterAffect>
+        <FitOwnerScale Comment="是否需要适配宿主比例（原始资源需要1倍大小）">False</FitOwnerScale>
+        <FuncID IsNull="true" />
+        <HitIntervalKeyFrame Comment="只造成一次触发的关键帧 or 每隔一段时间触发的关键帧">
+          <Attack Comment="攻击伤害">
+            <Attack Comment="攻击力">1</Attack>
+            <Buff IsNull="true" />
+            <CrushEffect IsNull="true" />
+            <CrushPercent Comment="百分比概率击碎目标">0</CrushPercent>
+            <Effect IsNull="true" />
+            <FuncID IsNull="true" />
+            <MaskDamage Comment="产生受击">False</MaskDamage>
+            <MaskKnockDown Comment="产生击倒">False</MaskKnockDown>
+            <MaskMustCritical Comment="此次攻击必暴击，即使暴击为0">False</MaskMustCritical>
+            <MaskMustHit Comment="此次攻击必命中，即使命中为0">False</MaskMustHit>
+            <mSN>26</mSN>
+            <Properties type="_Temp_.Battle.Data.Properties._Temp_AttackProperties" Comment="用户自定义扩展属性">
+              <FuncID IsNull="true" />
+            </Properties>
+            <Spell IsNull="true" />
+            <StopFrameAction IsNull="true" />
+            <StopFrameMS Comment="定帧时长">0</StopFrameMS>
+          </Attack>
+          <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+            <FuncID IsNull="true" />
+          </CustomAction>
+          <Effect IsNull="true" />
+          <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+          <FuncID IsNull="true" />
+          <Spell IsNull="true" />
+          <Summon IsNull="true" />
+        </HitIntervalKeyFrame>
+        <HitIntervalMS Comment="每间隔多少时间就触发一次，0 适用于穿透性，但只对单位造成一次伤害（毫秒）">0</HitIntervalMS>
+        <HitOnExplosion Comment="击中就消失(爆炸)，和HitIntervalMS冲突">True</HitOnExplosion>
+        <HitOnExplosionKeyFrame Comment="击中就消失(爆炸)关键帧，适用于打到就爆和Cannon类法术">
+          <Attack Comment="攻击伤害">
+            <Attack Comment="攻击力">1</Attack>
+            <Buff IsNull="true" />
+            <CrushEffect IsNull="true" />
+            <CrushPercent Comment="百分比概率击碎目标">0</CrushPercent>
+            <Effect Comment="被击中特效">
+              <AnimName IsNull="true" />
+              <AutoFitBindBodySize Comment="是否根据绑定物bodysize缩放">False</AutoFitBindBodySize>
+              <BindBody Comment="触发特效是否绑定在单位(坐标)">False</BindBody>
+              <BindBodyDirection Comment="触发特效是否绑定在单位(方向)">True</BindBodyDirection>
+              <BindingOffsetAngle360 Comment="如果为绑定，绑定角度偏移量">0</BindingOffsetAngle360>
+              <BindingOffsetDistance Comment="如果为绑定，绑定长度偏移量">0</BindingOffsetDistance>
+              <BindingOffsetZ Comment="如果为绑定，绑定Z高度偏移量">0</BindingOffsetZ>
+              <BindPartName IsNull="true" />
+              <Blur IsNull="true" />
+              <BodyVoxelAnchor Comment="高度对齐方式">Floating</BodyVoxelAnchor>
+              <Camera IsNull="true" />
+              <DeadTimeMS Comment="特效消亡后的持续时间">0</DeadTimeMS>
+              <EffectTimeMS Comment="特效持续时间。（0表示只播放一次；-1表示无限循环。）">0</EffectTimeMS>
+              <FuncID IsNull="true" />
+              <IsLoop Comment="是否循环">False</IsLoop>
+              <mSN>25</mSN>
+              <Name Comment="特效资源名">Assets/ArtWork/Lowpoly/PolygonParticles/Prefabs/FX_BloodSplat_Small_01.prefab</Name>
+              <Properties type="_Temp_.Battle.Data.Properties._Temp_EffectProperties" Comment="用户自定义扩展属性">
+                <FuncID IsNull="true" />
+              </Properties>
+              <ResTransform IsNull="true" />
+              <ScaleToBodySize Comment="如果不为0，则特效以该尺寸缩放">1</ScaleToBodySize>
+              <SoundName IsNull="true" />
+              <SubEffects IsNull="true" />
+              <Tag IsNull="true" />
+              <TextColor Comment="文字颜色">0</TextColor>
+              <TimeScale Comment="特效动画速度">1</TimeScale>
+              <WarningShape IsNull="true" />
+            </Effect>
+            <FuncID IsNull="true" />
+            <MaskDamage Comment="产生受击">False</MaskDamage>
+            <MaskKnockDown Comment="产生击倒">False</MaskKnockDown>
+            <MaskMustCritical Comment="此次攻击必暴击，即使暴击为0">False</MaskMustCritical>
+            <MaskMustHit Comment="此次攻击必命中，即使命中为0">False</MaskMustHit>
+            <mSN>24</mSN>
+            <Properties type="_Temp_.Battle.Data.Properties._Temp_AttackProperties" Comment="用户自定义扩展属性">
+              <FuncID IsNull="true" />
+            </Properties>
+            <Spell IsNull="true" />
+            <StopFrameAction IsNull="true" />
+            <StopFrameMS Comment="定帧时长">0</StopFrameMS>
+          </Attack>
+          <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+            <FuncID IsNull="true" />
+          </CustomAction>
+          <Effect IsNull="true" />
+          <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+          <FuncID IsNull="true" />
+          <Spell IsNull="true" />
+          <Summon IsNull="true" />
+        </HitOnExplosionKeyFrame>
+        <IconName IsNull="true" />
+        <ID Comment="ID">10001</ID>
+        <IsCycAnim Comment="是否循环播放动画">True</IsCycAnim>
+        <KeyFrames IsNull="true" />
+        <LastKeyFrame IsNull="true" />
+        <LifeTimeMS Comment="生命周期(毫秒)，如果为0，则跟着绑定单位走">10000</LifeTimeMS>
+        <MapBlockExplosion Comment="触碰地图就消失(爆炸)，触发HitOnExplosion">False</MapBlockExplosion>
+        <MaxAffectUnit Comment="单次受击最大影响（受击）单位，0表示无限制">0</MaxAffectUnit>
+        <MaxHitCount Comment="总共会造成多少次受击(穿透次数)，0表示无限制">0</MaxHitCount>
+        <MCannonGravitySEC Comment="重力">0</MCannonGravitySEC>
+        <MCannonThrow Comment="抛物线类型">Horizontal</MCannonThrow>
+        <MSpeed_MAX Comment="最大限速">100</MSpeed_MAX>
+        <MSpeed_MIN Comment="最小限速">-100</MSpeed_MIN>
+        <MSpeedAcc Comment="阻力(每秒递减速度百分比)">0</MSpeedAcc>
+        <MSpeedAdd Comment="加速度(距离/每秒)(最终速度=速度+加速度)">0</MSpeedAdd>
+        <MSpeedSEC Comment="运动速度,AOE或者扩散类，缩放速度(距离 / 每秒)">10</MSpeedSEC>
+        <MType Comment="运动类型">Straight</MType>
+        <Name Comment="名字">直线子弹</Name>
+        <NoTouchTimeMS Comment="无判定时间(毫秒)">0</NoTouchTimeMS>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_SpellProperties" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RemoveOnBindingSkillOver Comment="绑定目标非技能状态时移除自己">False</RemoveOnBindingSkillOver>
+        <RemoveOnBindingUncontrollable Comment="绑定目标不可操控时移除自己">False</RemoveOnBindingUncontrollable>
+        <ResetSeekingTarget IsNull="true" />
+        <ResFaceToMotion Comment="资源一直朝向目标（如果为Missile，Line，则也会一直朝向目标）">True</ResFaceToMotion>
+        <RotateSpeedAcc Comment="自转转动阻力">0</RotateSpeedAcc>
+        <RotateSpeedAdd Comment="自转转动速度增加(弧度/每秒)">0</RotateSpeedAdd>
+        <RotateSpeedSEC Comment="自转转动速度(弧度/每秒)">0</RotateSpeedSEC>
+        <SoundName IsNull="true" />
+        <SpawnEffect IsNull="true" />
+        <StopBindingSkillOnRemoved Comment="当Spell被移除停止释放它的技能">False</StopBindingSkillOnRemoved>
+        <TargetEffect IsNull="true" />
+        <UserTag IsNull="true" />
+      </value>
+    </element>
+    <element>
+      <key>36398775</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.ISpellTemplateAbility" Comment="能力" />
+        <Attributes IsNull="true" />
+        <BindingEffect IsNull="true" />
+        <BodyHeight Comment="法术自身高度">0.125</BodyHeight>
+        <BodyHitVoxelAnchor Comment="法术判定范围对齐方式">NA</BodyHitVoxelAnchor>
+        <BodyShape Comment="攻击范围类型">Round</BodyShape>
+        <BodySize Comment="尺寸，半径（Round, Fan, Circle）">0.5</BodySize>
+        <BodyVoxelAnchor Comment="法术高度对齐方式">Floating</BodyVoxelAnchor>
+        <BonesBegin IsNull="true" />
+        <BonesEnd IsNull="true" />
+        <CleanHitIntervalMS Comment="多长时间可以再次造成伤害">0</CleanHitIntervalMS>
+        <ClientVisible Comment="客户端是否可见">True</ClientVisible>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <DestoryEffect IsNull="true" />
+        <DestoryTimeMS Comment="销毁时间(毫秒)，延迟移除">0</DestoryTimeMS>
+        <EditorPath Comment=""></EditorPath>
+        <ExpectTarget Comment="法术期望作用目标">Enemy</ExpectTarget>
+        <FileBodyScale Comment="缩放比率">1</FileBodyScale>
+        <FileName IsNull="true" />
+        <FileNameDestory IsNull="true" />
+        <FileNameSpawn IsNull="true" />
+        <FilterAffect Comment="过滤范围内目标">Random</FilterAffect>
+        <FitOwnerScale Comment="是否需要适配宿主比例（原始资源需要1倍大小）">False</FitOwnerScale>
+        <FuncID IsNull="true" />
+        <HitIntervalKeyFrame Comment="只造成一次触发的关键帧 or 每隔一段时间触发的关键帧">
+          <Attack Comment="攻击伤害">
+            <Attack Comment="攻击力">1</Attack>
+            <Buff IsNull="true" />
+            <CrushEffect IsNull="true" />
+            <CrushPercent Comment="百分比概率击碎目标">0</CrushPercent>
+            <Effect IsNull="true" />
+            <FuncID IsNull="true" />
+            <MaskDamage Comment="产生受击">False</MaskDamage>
+            <MaskKnockDown Comment="产生击倒">False</MaskKnockDown>
+            <MaskMustCritical Comment="此次攻击必暴击，即使暴击为0">False</MaskMustCritical>
+            <MaskMustHit Comment="此次攻击必命中，即使命中为0">False</MaskMustHit>
+            <mSN>27</mSN>
+            <Properties type="_Temp_.Battle.Data.Properties._Temp_AttackProperties" Comment="用户自定义扩展属性">
+              <FuncID IsNull="true" />
+            </Properties>
+            <Spell IsNull="true" />
+            <StopFrameAction IsNull="true" />
+            <StopFrameMS Comment="定帧时长">0</StopFrameMS>
+          </Attack>
+          <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+            <FuncID IsNull="true" />
+          </CustomAction>
+          <Effect IsNull="true" />
+          <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+          <FuncID IsNull="true" />
+          <Spell IsNull="true" />
+          <Summon IsNull="true" />
+        </HitIntervalKeyFrame>
+        <HitIntervalMS Comment="每间隔多少时间就触发一次，0 适用于穿透性，但只对单位造成一次伤害（毫秒）">0</HitIntervalMS>
+        <HitOnExplosion Comment="击中就消失(爆炸)，和HitIntervalMS冲突">False</HitOnExplosion>
+        <IconName IsNull="true" />
+        <ID Comment="ID">36398775</ID>
+        <IsCycAnim Comment="是否循环播放动画">True</IsCycAnim>
+        <KeyFrames IsNull="true" />
+        <LastKeyFrame IsNull="true" />
+        <LifeTimeMS Comment="生命周期(毫秒)，如果为0，则跟着绑定单位走">10000</LifeTimeMS>
+        <MapBlockExplosion Comment="触碰地图就消失(爆炸)，触发HitOnExplosion">False</MapBlockExplosion>
+        <MaxAffectUnit Comment="单次受击最大影响（受击）单位，0表示无限制">0</MaxAffectUnit>
+        <MaxHitCount Comment="总共会造成多少次受击(穿透次数)，0表示无限制">0</MaxHitCount>
+        <MCannonGravitySEC Comment="重力">0</MCannonGravitySEC>
+        <MCannonThrow Comment="抛物线类型">Horizontal</MCannonThrow>
+        <MSpeed_MAX Comment="最大限速">100</MSpeed_MAX>
+        <MSpeed_MIN Comment="最小限速">-100</MSpeed_MIN>
+        <MSpeedAcc Comment="阻力(每秒递减速度百分比)">0</MSpeedAcc>
+        <MSpeedAdd Comment="加速度(距离/每秒)(最终速度=速度+加速度)">0</MSpeedAdd>
+        <MSpeedSEC Comment="运动速度,AOE或者扩散类，缩放速度(距离 / 每秒)">10</MSpeedSEC>
+        <MType Comment="运动类型">Straight</MType>
+        <Name Comment="名字">直线子弹</Name>
+        <NoTouchTimeMS Comment="无判定时间(毫秒)">0</NoTouchTimeMS>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_SpellProperties" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RemoveOnBindingSkillOver Comment="绑定目标非技能状态时移除自己">False</RemoveOnBindingSkillOver>
+        <RemoveOnBindingUncontrollable Comment="绑定目标不可操控时移除自己">False</RemoveOnBindingUncontrollable>
+        <ResetSeekingTarget IsNull="true" />
+        <ResFaceToMotion Comment="资源一直朝向目标（如果为Missile，Line，则也会一直朝向目标）">True</ResFaceToMotion>
+        <RotateSpeedAcc Comment="自转转动阻力">0</RotateSpeedAcc>
+        <RotateSpeedAdd Comment="自转转动速度增加(弧度/每秒)">0</RotateSpeedAdd>
+        <RotateSpeedSEC Comment="自转转动速度(弧度/每秒)">0</RotateSpeedSEC>
+        <SoundName IsNull="true" />
+        <SpawnEffect IsNull="true" />
+        <StopBindingSkillOnRemoved Comment="当Spell被移除停止释放它的技能">False</StopBindingSkillOnRemoved>
+        <TargetEffect IsNull="true" />
+        <UserTag IsNull="true" />
+      </value>
+    </element>
+  </Spells>
+  <UnitEvents key_type="System.Int32" value_type="DeepMetaGame.Data.Template.UnitEventTemplate" Comment="单位事件触发" />
+  <Units key_type="System.Int32" value_type="DeepMetaGame.Data.Template.UnitInfo" Comment="单位模板数据">
+    <element>
+      <key>10001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/Alt_Soldiers/SM_Chr_Soldier_Male_01_Alt_01.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>4</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">10003</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">1.3</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0.5</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">0.CT</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/ct1.png</IconName>
+        <ID Comment="ID">10001</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">Seal Team 6</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>10002</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/Alt_Soldiers/SM_Chr_Soldier_Male_01_Alt_02.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>5</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">10003</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">1.3</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0.5</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">0.CT</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/ct2.png</IconName>
+        <ID Comment="ID">10002</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">GSG-9</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>10003</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/Alt_Soldiers/SM_Chr_Soldier_Male_02_Alt_02.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>6</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">10003</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">1.3</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0.5</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">0.CT</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/ct3.png</IconName>
+        <ID Comment="ID">10003</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">S.AS</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>10004</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/Alt_Soldiers/SM_Chr_Soldier_Male_02_Alt_04.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">12</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>7</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">10003</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">1.3</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0.5</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">0.CT</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/ct4.png</IconName>
+        <ID Comment="ID">10004</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">GIGN</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>20001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/SM_Chr_Insurgent_Male_01.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>3</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">1.T</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/t2.png</IconName>
+        <ID Comment="ID">20001</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">Phoenix Connexion</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>20002</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/SM_Chr_Insurgent_Male_02.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>20</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">1.T</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/t1.png</IconName>
+        <ID Comment="ID">20002</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">L337 Krew</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>20003</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/SM_Chr_Insurgent_Male_03.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>21</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">1.T</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/t3.png</IconName>
+        <ID Comment="ID">20003</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">Arctic Avengers</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>20004</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName Comment="对应的模型文件名">Assets/ArtWork/Lowpoly/PolygonMilitary/Prefabs/Characters/SM_Chr_Insurgent_Male_04.prefab</FileName>
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">6.2831855</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">3</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">6.2831855</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>22</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">1.T</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/png/t4.png</IconName>
+        <ID Comment="ID">20004</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">Guerilla Warfare</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>1</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/32.png</IconName>
+        <ID Comment="ID">30001</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">刀</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30002</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>2</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/10.png</IconName>
+        <ID Comment="ID">30002</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">手枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30003</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>15</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/14.png</IconName>
+        <ID Comment="ID">30003</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">冲锋枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30004</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>16</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/11.png</IconName>
+        <ID Comment="ID">30004</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">霰弹枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30005</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>17</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/38.png</IconName>
+        <ID Comment="ID">30005</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">突击步枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30006</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>18</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/18.png</IconName>
+        <ID Comment="ID">30006</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">狙击步枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>30007</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>19</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/34.png</IconName>
+        <ID Comment="ID">30007</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">重机枪</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31001</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>8</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/13.png</IconName>
+        <ID Comment="ID">31001</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">DE</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31002</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>9</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/38.png</IconName>
+        <ID Comment="ID">31002</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">MP5</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31003</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>10</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/16.png</IconName>
+        <ID Comment="ID">31003</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">AK47</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31004</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>11</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/36.png</IconName>
+        <ID Comment="ID">31004</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">M4A1</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31005</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>12</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/41.png</IconName>
+        <ID Comment="ID">31005</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">AWP</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31006</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>13</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/33.png</IconName>
+        <ID Comment="ID">31006</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">M249</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+    <element>
+      <key>31007</key>
+      <value>
+        <Abilities element_type="DeepMetaGame.Data.Template.IUnitTemplateAbility" Comment="能力列表，所有继承自IUnitTemplateAbility的子类">
+          <element type="DeepMetaGame.Data.Template.UnitResourceAbility" Comment="1.资源能力">
+            <BodyEffect IsNull="true" />
+            <BodyScale Comment="缩放比率">1</BodyScale>
+            <CrushEffect IsNull="true" />
+            <DamageEffect IsNull="true" />
+            <DeadEffect IsNull="true" />
+            <FileName IsNull="true" />
+            <FuncID IsNull="true" />
+            <LevelUpEffect IsNull="true" />
+            <OverrideActionMap IsNull="true" />
+            <RemovedEffect IsNull="true" />
+            <SkinAvatar IsNull="true" />
+            <SkinName IsNull="true" />
+            <SpawnEffect IsNull="true" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitGuardAbility" Comment="2.警戒能力">
+            <FuncID IsNull="true" />
+            <GuardRange Comment="警戒距离范围">10</GuardRange>
+            <GuardRangeAngle Comment="警戒范围角度(0-360)，0为圆形">0</GuardRangeAngle>
+            <GuardRangeGroup Comment="传递警戒范围，如果此单位进入战斗，则传给相邻单位Add，0表示不传递">5</GuardRangeGroup>
+            <GuardRangeLimitAppend Comment="原有警戒范围，的超出警戒范围（GuardRange + GuardRangeLimitAppend）">5</GuardRangeLimitAppend>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitRecoverAbility" Comment="3.恢复能力">
+            <FuncID IsNull="true" />
+            <HealthRecoveryPoint Comment="血量恢复/恢复间隔">1</HealthRecoveryPoint>
+            <ManaRecoveryPoint Comment="法力恢复/恢复间隔">1</ManaRecoveryPoint>
+            <RecoveryIntervalMS Comment="恢复间隔(毫秒)，脱离战斗后回血间隔时间">1000</RecoveryIntervalMS>
+            <StaminaRecoveryPoint Comment="耐力恢复/恢复间隔">10</StaminaRecoveryPoint>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitMotionAbility" Comment="4.移动能力">
+            <BodyTurnSpeedSEC Comment="身体跟随转动速度(弧度)">0</BodyTurnSpeedSEC>
+            <Control Comment="控制朝向方式">FaceToMoveDirection</Control>
+            <FuncID IsNull="true" />
+            <IsMoveable Comment="是否可移动">True</IsMoveable>
+            <IsMoveImpact Comment="移动时可以挤开别人">False</IsMoveImpact>
+            <IsNoneGravity Comment="无重力">False</IsNoneGravity>
+            <IsTurnable Comment="是否可转向">True</IsTurnable>
+            <JumpMoveSpeed Comment="跳跃移动速度">6</JumpMoveSpeed>
+            <JumpZSpeed Comment="跳跃上升初速度">6</JumpZSpeed>
+            <MoveAnimateRate Comment="移动速度动画速度播放比率">1</MoveAnimateRate>
+            <MoveSpeedSEC Comment="移动速度(距离/每秒)">6</MoveSpeedSEC>
+            <ScaleAnimateRate Comment="缩放动画速度播放比率">0.38</ScaleAnimateRate>
+            <TurnSpeedSEC Comment="转脸速度（弧度/秒）">0</TurnSpeedSEC>
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitSkillAbility" Comment="5.技能能力">
+            <BaseSkillID Comment="此单位普通攻击技能">
+              <AutoLaunch Comment="AI自动释放技能">True</AutoLaunch>
+              <AutoSeeking Comment="自动战斗锁敌方式">Nearest</AutoSeeking>
+              <FuncID IsNull="true" />
+              <mSN>14</mSN>
+              <Priority Comment="释放技能权值">0</Priority>
+              <SkillID Comment="SkillID">0</SkillID>
+              <SkillLevel Comment="技能等级">0</SkillLevel>
+            </BaseSkillID>
+            <DeadLaunchSpell IsNull="true" />
+            <FuncID IsNull="true" />
+            <LaunchSpellAngle Comment="法术发射弧度（炮口弧度）">0</LaunchSpellAngle>
+            <LaunchSpellHeight Comment="法术发射高度（炮口高度）">0</LaunchSpellHeight>
+            <LaunchSpellRadius Comment="法术发射半径（炮口半径）">0</LaunchSpellRadius>
+            <Skills element_type="DeepMetaGame.Data.Misc.LaunchSkill" Comment="此单位绑定的所有技能ID" />
+          </element>
+          <element type="DeepMetaGame.Data.Template.UnitInventoryAbility" Comment="7.背包能力">
+            <Cards element_type="DeepMetaGame.Data.Misc.CardSlot" Comment="进入战斗携带的词缀列表" />
+            <FuncID IsNull="true" />
+            <InventoryList element_type="DeepMetaGame.Data.Misc.InventoryItem" Comment="进入战斗携带的道具列表（比如血瓶）" />
+            <InventorySize Comment="单位背包数量">1</InventorySize>
+          </element>
+        </Abilities>
+        <Attributes IsNull="true" />
+        <BodyHeight Comment="身体高度">1.8</BodyHeight>
+        <BodySize Comment="身体尺寸（半径）">0.5</BodySize>
+        <BodySizeHitAppend Comment="身体受攻击尺寸（BodySize + BodyHitSizeAppend）（半径）">0.1</BodySizeHitAppend>
+        <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+        <Comment IsNull="true" />
+        <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+        <DamageTimeMS Comment="受击时间(毫秒)">10</DamageTimeMS>
+        <DeadTimeMS Comment="单位死亡持续时间，即死亡后多长时间内可继续鞭尸(毫秒)">0</DeadTimeMS>
+        <EditorPath Comment="">GUNS/明星</EditorPath>
+        <Events element_type="System.Int32" Comment="绑定单位事件行为树的ID" />
+        <FillZoneShape Comment="地图形状，只对建筑物对地图有影响类型生效">ROUND</FillZoneShape>
+        <FuncID IsNull="true" />
+        <HealthPoint Comment="血量">100</HealthPoint>
+        <IconName Comment="图标">/res/cpj/output/clips/31.png</IconName>
+        <ID Comment="ID">31007</ID>
+        <IsDynamic Comment="是否为动态创建单位，比如PVP或者根据玩家等级创建的单位">False</IsDynamic>
+        <IsElite Comment="是否为精英">False</IsElite>
+        <LifeTimeMS Comment="若是召唤类，则表示存活时间(毫秒)">0</LifeTimeMS>
+        <ManaPoint Comment="法力值">100</ManaPoint>
+        <Name Comment="名字">RPG</Name>
+        <NoTouch Comment="无碰撞">False</NoTouch>
+        <PickRange Comment="捡取范围（半径）">1</PickRange>
+        <Properties type="_Temp_.Battle.Data.Properties._Temp_UnitProp" Comment="扩展属性">
+          <FuncID IsNull="true" />
+        </Properties>
+        <RebirthTimeMS Comment="死亡后多久复活，0表示不能复活(毫秒)">0</RebirthTimeMS>
+        <SpawnTimeMS Comment="单位出生延时时间，通常播放出生动画(毫秒)">0</SpawnTimeMS>
+        <StaminaPoint Comment="耐力值">100</StaminaPoint>
+        <UserTag IsNull="true" />
+        <UType Comment="单位类型">TYPE_MONSTER</UType>
+        <Weight Comment="体重">1</Weight>
+      </value>
+    </element>
+  </Units>
+</data>

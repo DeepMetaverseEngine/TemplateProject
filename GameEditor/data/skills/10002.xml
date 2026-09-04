@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.Template.SkillTemplate" Comment="技能模板">
+  <Abilities element_type="DeepMetaGame.Data.Template.ISkillTemplateAbility" Comment="能力" />
+  <ActionPriority Comment="技能优先级，高优先级可打断低优先级">0</ActionPriority>
+  <ActionQueue element_type="DeepMetaGame.Data.Template.UnitActionData" Comment="攻击动作序列">
+    <element />
+  </ActionQueue>
+  <ActionSpeedRate Comment="动作播放速率">1</ActionSpeedRate>
+  <AttackBodyTouchRange Comment="技能和目标的保持距离">0</AttackBodyTouchRange>
+  <AttackFollowRange Comment="追踪状态单位开始攻击距离(必须小于技能攻击范围)，大于0起效">0</AttackFollowRange>
+  <AttackKeepRange Comment="保持攻击距离（NPC会保持一段距离再攻击）大于0启效">0</AttackKeepRange>
+  <AttackMustBeInRange Comment="单体攻击，只在目标处于攻击范围才产生伤害">True</AttackMustBeInRange>
+  <AttackShape Comment="攻击范围">
+    <AShape Comment="攻击范围类型">Fan</AShape>
+    <AttackAngle Comment="弧度（Fan）">0.7853982</AttackAngle>
+    <AttackRange Comment="半径（Round, Fan, Circle）长度(Strip, StripRay，StripRayTouchEnd, RectStrip, RectStripRay, LineToTarget, WideStrip)">3</AttackRange>
+    <FuncID IsNull="true" />
+    <OffsetRadius Comment="初始点半径偏移">0</OffsetRadius>
+  </AttackShape>
+  <Attributes IsNull="true" />
+  <BodyScale Comment="技能释放期间，模型缩放（仅客户端有效）">1</BodyScale>
+  <CastEffect IsNull="true" />
+  <ChantTimeMS Comment="吟唱时间（毫秒）大于0启效">0</ChantTimeMS>
+  <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+  <Comment IsNull="true" />
+  <CoolDownMS Comment="技能冷却时间(毫秒)">1000</CoolDownMS>
+  <CostHP Comment="释放消耗血量">0</CostHP>
+  <CostMP Comment="释放消耗法力">0</CostMP>
+  <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+  <EditorPath Comment=""></EditorPath>
+  <ExpectTarget Comment="技能期望作用目标">Enemy</ExpectTarget>
+  <FuncID IsNull="true" />
+  <IconName IsNull="true" />
+  <ID Comment="ID">10002</ID>
+  <IsCoolDownWithAction Comment="以动作时间作为冷却时间">False</IsCoolDownWithAction>
+  <IsCounter Comment="可以打断其他技能和受击状态，受身技能">False</IsCounter>
+  <IsLaunchBody Comment="法术是否从自己身上发出">True</IsLaunchBody>
+  <IsManuallyCancelable Comment="技能释放期间，可手动撤销（取消旋风斩动作）">False</IsManuallyCancelable>
+  <IsSelectRange Comment="释放时是否选择方向">False</IsSelectRange>
+  <IsShowIndicator Comment="是否显示指示器">False</IsShowIndicator>
+  <IsSingleAction Comment="每次释放只做一个动作，多段攻击">False</IsSingleAction>
+  <Name Comment="名字">近战扇形判定技能</Name>
+  <Properties type="_Temp_.Battle.Data.Properties._Temp_SkillProperties" Comment="扩展属性">
+    <FuncID IsNull="true" />
+  </Properties>
+  <SkillLaunchMode IsNull="true" />
+  <UserTag IsNull="true" />
+</data>

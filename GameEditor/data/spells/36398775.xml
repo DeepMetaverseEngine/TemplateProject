@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.Template.SpellTemplate" Comment="法术/飞行道具模板">
+  <Abilities element_type="DeepMetaGame.Data.Template.ISpellTemplateAbility" Comment="能力" />
+  <Attributes IsNull="true" />
+  <BindingEffect IsNull="true" />
+  <BodyHeight Comment="法术自身高度">0.125</BodyHeight>
+  <BodyHitVoxelAnchor Comment="法术判定范围对齐方式">NA</BodyHitVoxelAnchor>
+  <BodyShape Comment="攻击范围类型">Round</BodyShape>
+  <BodySize Comment="尺寸，半径（Round, Fan, Circle）">0.5</BodySize>
+  <BodyVoxelAnchor Comment="法术高度对齐方式">Floating</BodyVoxelAnchor>
+  <BonesBegin IsNull="true" />
+  <BonesEnd IsNull="true" />
+  <CleanHitIntervalMS Comment="多长时间可以再次造成伤害">0</CleanHitIntervalMS>
+  <ClientVisible Comment="客户端是否可见">True</ClientVisible>
+  <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+  <Comment IsNull="true" />
+  <DestoryEffect IsNull="true" />
+  <DestoryTimeMS Comment="销毁时间(毫秒)，延迟移除">0</DestoryTimeMS>
+  <EditorPath Comment=""></EditorPath>
+  <ExpectTarget Comment="法术期望作用目标">Enemy</ExpectTarget>
+  <FileBodyScale Comment="缩放比率">1</FileBodyScale>
+  <FileName IsNull="true" />
+  <FileNameDestory IsNull="true" />
+  <FileNameSpawn IsNull="true" />
+  <FilterAffect Comment="过滤范围内目标">Random</FilterAffect>
+  <FitOwnerScale Comment="是否需要适配宿主比例（原始资源需要1倍大小）">False</FitOwnerScale>
+  <FuncID IsNull="true" />
+  <HitIntervalKeyFrame Comment="只造成一次触发的关键帧 or 每隔一段时间触发的关键帧">
+    <Attack Comment="攻击伤害">
+      <Attack Comment="攻击力">1</Attack>
+      <Buff IsNull="true" />
+      <CrushEffect IsNull="true" />
+      <CrushPercent Comment="百分比概率击碎目标">0</CrushPercent>
+      <Effect IsNull="true" />
+      <FuncID IsNull="true" />
+      <MaskDamage Comment="产生受击">False</MaskDamage>
+      <MaskKnockDown Comment="产生击倒">False</MaskKnockDown>
+      <MaskMustCritical Comment="此次攻击必暴击，即使暴击为0">False</MaskMustCritical>
+      <MaskMustHit Comment="此次攻击必命中，即使命中为0">False</MaskMustHit>
+      <mSN>27</mSN>
+      <Properties type="_Temp_.Battle.Data.Properties._Temp_AttackProperties" Comment="用户自定义扩展属性">
+        <FuncID IsNull="true" />
+      </Properties>
+      <Spell IsNull="true" />
+      <StopFrameAction IsNull="true" />
+      <StopFrameMS Comment="定帧时长">0</StopFrameMS>
+    </Attack>
+    <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+      <FuncID IsNull="true" />
+    </CustomAction>
+    <Effect IsNull="true" />
+    <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+    <FuncID IsNull="true" />
+    <Spell IsNull="true" />
+    <Summon IsNull="true" />
+  </HitIntervalKeyFrame>
+  <HitIntervalMS Comment="每间隔多少时间就触发一次，0 适用于穿透性，但只对单位造成一次伤害（毫秒）">0</HitIntervalMS>
+  <HitOnExplosion Comment="击中就消失(爆炸)，和HitIntervalMS冲突">False</HitOnExplosion>
+  <IconName IsNull="true" />
+  <ID Comment="ID">36398775</ID>
+  <IsCycAnim Comment="是否循环播放动画">True</IsCycAnim>
+  <KeyFrames IsNull="true" />
+  <LastKeyFrame IsNull="true" />
+  <LifeTimeMS Comment="生命周期(毫秒)，如果为0，则跟着绑定单位走">10000</LifeTimeMS>
+  <MapBlockExplosion Comment="触碰地图就消失(爆炸)，触发HitOnExplosion">False</MapBlockExplosion>
+  <MaxAffectUnit Comment="单次受击最大影响（受击）单位，0表示无限制">0</MaxAffectUnit>
+  <MaxHitCount Comment="总共会造成多少次受击(穿透次数)，0表示无限制">0</MaxHitCount>
+  <MCannonGravitySEC Comment="重力">0</MCannonGravitySEC>
+  <MCannonThrow Comment="抛物线类型">Horizontal</MCannonThrow>
+  <MSpeed_MAX Comment="最大限速">100</MSpeed_MAX>
+  <MSpeed_MIN Comment="最小限速">-100</MSpeed_MIN>
+  <MSpeedAcc Comment="阻力(每秒递减速度百分比)">0</MSpeedAcc>
+  <MSpeedAdd Comment="加速度(距离/每秒)(最终速度=速度+加速度)">0</MSpeedAdd>
+  <MSpeedSEC Comment="运动速度,AOE或者扩散类，缩放速度(距离 / 每秒)">10</MSpeedSEC>
+  <MType Comment="运动类型">Straight</MType>
+  <Name Comment="名字">直线子弹</Name>
+  <NoTouchTimeMS Comment="无判定时间(毫秒)">0</NoTouchTimeMS>
+  <Properties type="_Temp_.Battle.Data.Properties._Temp_SpellProperties" Comment="扩展属性">
+    <FuncID IsNull="true" />
+  </Properties>
+  <RemoveOnBindingSkillOver Comment="绑定目标非技能状态时移除自己">False</RemoveOnBindingSkillOver>
+  <RemoveOnBindingUncontrollable Comment="绑定目标不可操控时移除自己">False</RemoveOnBindingUncontrollable>
+  <ResetSeekingTarget IsNull="true" />
+  <ResFaceToMotion Comment="资源一直朝向目标（如果为Missile，Line，则也会一直朝向目标）">True</ResFaceToMotion>
+  <RotateSpeedAcc Comment="自转转动阻力">0</RotateSpeedAcc>
+  <RotateSpeedAdd Comment="自转转动速度增加(弧度/每秒)">0</RotateSpeedAdd>
+  <RotateSpeedSEC Comment="自转转动速度(弧度/每秒)">0</RotateSpeedSEC>
+  <SoundName IsNull="true" />
+  <SpawnEffect IsNull="true" />
+  <StopBindingSkillOnRemoved Comment="当Spell被移除停止释放它的技能">False</StopBindingSkillOnRemoved>
+  <TargetEffect IsNull="true" />
+  <UserTag IsNull="true" />
+</data>

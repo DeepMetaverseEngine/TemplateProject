@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.Template.SkillTemplate" Comment="技能模板">
+  <Abilities element_type="DeepMetaGame.Data.Template.ISkillTemplateAbility" Comment="能力" />
+  <ActionPriority Comment="技能优先级，高优先级可打断低优先级">0</ActionPriority>
+  <ActionQueue element_type="DeepMetaGame.Data.Template.UnitActionData" Comment="攻击动作序列">
+    <element>
+      <Action Comment="动作">
+        <ActionEffect IsNull="true" />
+        <ActionParams element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Param" Comment="动作参数" />
+        <ActionTriggers element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Trigger" Comment="动作触发器" />
+        <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+          <FuncID IsNull="true" />
+        </CustomAction>
+        <Cycle Comment="是否循环">True</Cycle>
+        <DefaultState Comment="默认状态">
+          <CrossFadeTimeMS Comment="是否淡出">0</CrossFadeTimeMS>
+          <LayerName IsNull="true" />
+          <LayerWeight Comment="动作分层权重">-1</LayerWeight>
+          <StateName Comment="动作名">Idle</StateName>
+        </DefaultState>
+        <RepeatCount Comment="循环播几次">0</RepeatCount>
+        <SoundName IsNull="true" />
+        <Speed Comment="播放速度">1</Speed>
+        <SubStateKey IsNull="true" />
+        <SubStates element_type="DeepMetaGame.Data.Misc.UnitActionDefinitionMap+UnitActionKeyFrame+Layer" Comment="分层状态" />
+        <Tag Comment="Tag"></Tag>
+        <TimeMS Comment="播放时间（如果多段动作，则需要指定每段时间）">100</TimeMS>
+      </Action>
+      <ActionEffect IsNull="true" />
+      <BodyBlockOnAttackRange Comment="在攻击范围内，如果位移则挤开目标">True</BodyBlockOnAttackRange>
+      <BodyHit IsNull="true" />
+      <FuncID IsNull="true" />
+      <IsCancelable Comment="移动可取消动作">False</IsCancelable>
+      <IsCancelableBySkill Comment="技能可取消动作">False</IsCancelableBySkill>
+      <IsControlFaceable Comment="动作中可以控制转向">False</IsControlFaceable>
+      <IsControlMoveable Comment="动作中是否可以控制移动">False</IsControlMoveable>
+      <IsFaceToTarget Comment="动作中是否面向目标">False</IsFaceToTarget>
+      <IsInvisible Comment="动作是否隐身">False</IsInvisible>
+      <IsJumpLockTarget Comment="跳跃锁定目标，目标必须在攻击范围内">False</IsJumpLockTarget>
+      <IsJumpToTarget Comment="(冲锋)：移动到目标根据(距离/动作时间)来算速度，如果目标在原地，则原地跳跃。">False</IsJumpToTarget>
+      <IsMoveToTarget Comment="(冲锋)：移动到目标。">False</IsMoveToTarget>
+      <IsMoveToTargetStopAction Comment="冲锋或跳跃到目标时是否立即结束当前动作">False</IsMoveToTargetStopAction>
+      <IsNoneBlock Comment="是否进入霸体状态，不会被打断">False</IsNoneBlock>
+      <IsNoneTouch Comment="动作期间是否无碰撞">False</IsNoneTouch>
+      <KeyFrames element_type="DeepMetaGame.Data.Template.UnitActionData+KeyFrame" Comment="所有关键帧">
+        <element>
+          <Attack IsNull="true" />
+          <Blink IsNull="true" />
+          <ChangeStatus IsNull="true" />
+          <ChangeTarget IsNull="true" />
+          <CustomAction type="_Temp_.Battle.Data.Properties._Temp_CustomKeyFrame" Comment="自定义动作">
+            <FuncID IsNull="true" />
+          </CustomAction>
+          <Effect IsNull="true" />
+          <FrameMS Comment="关键帧时间(毫秒)">0</FrameMS>
+          <FuncID IsNull="true" />
+          <Move IsNull="true" />
+          <SelfAura IsNull="true" />
+          <SelfBuff IsNull="true" />
+          <Spell Comment="关键帧产生的法术或远程道具单位模板ID">
+            <ChainLevel Comment="连锁等级，只在技能中LaunchSpell有效（闪电链类数量，如果Spell launch spell ID一致，则传递此值）如果为0，则不传递相同的Spell。">0</ChainLevel>
+            <FinalChainSpell IsNull="true" />
+            <FromSpellMagnitude Comment="Spell发射Straight Spell时，是否传递速度权重(Normal and Speed)">False</FromSpellMagnitude>
+            <FromUnitBody Comment="填True，下面无效，发射口是否以单位炮口作为参考">True</FromUnitBody>
+            <FuncID IsNull="true" />
+            <InheritDamageTargetList Comment="弹射类子弹忽略弹射本体">False</InheritDamageTargetList>
+            <IsAutoSeekingTarget Comment="自动锁定范围内目标">False</IsAutoSeekingTarget>
+            <LaunchPercent Comment="触发百分比">100</LaunchPercent>
+            <mSN>23</mSN>
+            <PType Comment="触发新的法术运行方式">POS_TYPE_DEFAULT_SINGLE</PType>
+            <RandomAngle Comment="随机角度">0</RandomAngle>
+            <RepeatCount Comment="连续触发次数">0</RepeatCount>
+            <RepeatIntervalMS Comment="连续触发间距">100</RepeatIntervalMS>
+            <ResetSeekingTarget IsNull="true" />
+            <SenderUnit Comment="发射者">Sender</SenderUnit>
+            <SpellID Comment="触发新的法术">10001</SpellID>
+            <SpellLevel Comment="法术等级">0</SpellLevel>
+            <StartAngle Comment="发射初始弧度">0</StartAngle>
+            <StartDirection Comment="法术起始方向">FaceToTarget</StartDirection>
+            <SubSpells IsNull="true" />
+          </Spell>
+          <Summon IsNull="true" />
+        </element>
+      </KeyFrames>
+      <MoveToTargetSpeedSEC Comment="移动到目标速度">10</MoveToTargetSpeedSEC>
+      <OverrideAttackShape IsNull="true" />
+      <TargetOffset Comment="位移到目标位偏移量">0</TargetOffset>
+      <TargetPos Comment="位移到目标位置">Body</TargetPos>
+      <TriggerNextActionWaitTimeMS Comment="可触发下一段攻击的等待时间（毫秒）">0</TriggerNextActionWaitTimeMS>
+    </element>
+  </ActionQueue>
+  <ActionSpeedRate Comment="动作播放速率">1</ActionSpeedRate>
+  <AttackBodyTouchRange Comment="技能和目标的保持距离">0</AttackBodyTouchRange>
+  <AttackFollowRange Comment="追踪状态单位开始攻击距离(必须小于技能攻击范围)，大于0起效">0</AttackFollowRange>
+  <AttackKeepRange Comment="保持攻击距离（NPC会保持一段距离再攻击）大于0启效">0</AttackKeepRange>
+  <AttackMustBeInRange Comment="单体攻击，只在目标处于攻击范围才产生伤害">True</AttackMustBeInRange>
+  <AttackShape Comment="攻击范围">
+    <AShape Comment="攻击范围类型">Fan</AShape>
+    <AttackAngle Comment="弧度（Fan）">0.7853982</AttackAngle>
+    <AttackRange Comment="半径（Round, Fan, Circle）长度(Strip, StripRay，StripRayTouchEnd, RectStrip, RectStripRay, LineToTarget, WideStrip)">15</AttackRange>
+    <FuncID IsNull="true" />
+    <OffsetRadius Comment="初始点半径偏移">0</OffsetRadius>
+  </AttackShape>
+  <Attributes IsNull="true" />
+  <BodyScale Comment="技能释放期间，模型缩放（仅客户端有效）">1</BodyScale>
+  <CastEffect IsNull="true" />
+  <ChantTimeMS Comment="吟唱时间（毫秒）大于0启效">0</ChantTimeMS>
+  <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+  <Comment IsNull="true" />
+  <CoolDownMS Comment="技能冷却时间(毫秒)">200</CoolDownMS>
+  <CostHP Comment="释放消耗血量">0</CostHP>
+  <CostMP Comment="释放消耗法力">0</CostMP>
+  <CustomEvents element_type="DeepMetaGame.Data.ZoneEditor.UnitCustomEvent" Comment="所有事件" />
+  <EditorPath Comment=""></EditorPath>
+  <ExpectTarget Comment="技能期望作用目标">Enemy</ExpectTarget>
+  <FuncID IsNull="true" />
+  <IconName IsNull="true" />
+  <ID Comment="ID">10003</ID>
+  <IsCoolDownWithAction Comment="以动作时间作为冷却时间">False</IsCoolDownWithAction>
+  <IsCounter Comment="可以打断其他技能和受击状态，受身技能">False</IsCounter>
+  <IsLaunchBody Comment="法术是否从自己身上发出">True</IsLaunchBody>
+  <IsManuallyCancelable Comment="技能释放期间，可手动撤销（取消旋风斩动作）">False</IsManuallyCancelable>
+  <IsSelectRange Comment="释放时是否选择方向">False</IsSelectRange>
+  <IsShowIndicator Comment="是否显示指示器">False</IsShowIndicator>
+  <IsSingleAction Comment="每次释放只做一个动作，多段攻击">False</IsSingleAction>
+  <Name Comment="名字">发射子弹技能</Name>
+  <Properties type="_Temp_.Battle.Data.Properties._Temp_SkillProperties" Comment="扩展属性">
+    <FuncID IsNull="true" />
+  </Properties>
+  <SkillLaunchMode IsNull="true" />
+  <UserTag IsNull="true" />
+</data>

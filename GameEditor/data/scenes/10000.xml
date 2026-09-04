@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data type="DeepMetaGame.Data.ZoneEditor.SceneData" Comment="关卡数据">
+  <Abilities element_type="DeepMetaGame.Data.ZoneEditor.SceneAbilityData" Comment="所有能力" />
+  <Areas element_type="DeepMetaGame.Data.ZoneEditor.AreaData" Comment="所有区域" />
+  <Attributes IsNull="true" />
+  <BGM IsNull="true" />
+  <ColorARGB Comment="Color(ARGB)">0</ColorARGB>
+  <Comment IsNull="true" />
+  <Decorations element_type="DeepMetaGame.Data.ZoneEditor.DecorationData" Comment="所有装饰物" />
+  <DefaultUnitLevel Comment="默认单位等级">0</DefaultUnitLevel>
+  <Desc IsNull="true" />
+  <EditorPath Comment=""></EditorPath>
+  <EnableServerAOI Comment="启用ServerAOI">True</EnableServerAOI>
+  <Events element_type="System.Int32" Comment="绑定公共触发事件ID" />
+  <FileName Comment="场景资源">Assets/ArtWork/Scenes/PolygonMilitary.Scene.prefab</FileName>
+  <FullPlayer Comment="可进入玩家数量">1000</FullPlayer>
+  <FuncID IsNull="true" />
+  <Host Comment="">
+    <EnvironmentVars element_type="DeepMetaGame.Data.IZoneEnvironmentVar" Comment="事件" />
+    <Events element_type="DeepMetaGame.Data.ZoneEditor.ZoneEvent" Comment="事件" />
+    <Script IsNull="true" />
+  </Host>
+  <IconName IsNull="true" />
+  <ID Comment="ID">10000</ID>
+  <IsPublicMap Comment="是否为公共房间">False</IsPublicMap>
+  <Items element_type="DeepMetaGame.Data.ZoneEditor.ItemData" Comment="所有物品" />
+  <MaxPlayer Comment="最大支持玩家数量">1100</MaxPlayer>
+  <MaxUnit Comment="最大单位数量">10000</MaxUnit>
+  <Name Comment="名字">Scope</Name>
+  <OverrideConfig IsNull="true" />
+  <OverrideExtConfig IsNull="true" />
+  <OverrideTerrainDefinition IsNull="true" />
+  <Points element_type="DeepMetaGame.Data.ZoneEditor.PointData" Comment="所有路点">
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.PointAbilityData" Comment="绑定的能力" />
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355585</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <IsPathAnchor Comment="是否为寻路参考点">False</IsPathAnchor>
+      <Name Comment="">PointData1</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点">
+        <element>PointData2</element>
+      </NextNames>
+      <NextPercent Comment="路点被选择概率(权重)%">100</NextPercent>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment="">wp</SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Size Comment="尺寸">1</Size>
+      <Tag IsNull="true" />
+      <TangentSize Comment="贝塞尔切线长度">0</TangentSize>
+      <X Comment="坐标X">43.960487</X>
+      <Y Comment="坐标Y">33.88006</Y>
+      <Z Comment="坐标Z">0.08</Z>
+    </element>
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.PointAbilityData" Comment="绑定的能力" />
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355585</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <IsPathAnchor Comment="是否为寻路参考点">False</IsPathAnchor>
+      <Name Comment="">PointData2</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点">
+        <element>PointData3</element>
+      </NextNames>
+      <NextPercent Comment="路点被选择概率(权重)%">100</NextPercent>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment="">wp</SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Size Comment="尺寸">1</Size>
+      <Tag IsNull="true" />
+      <TangentSize Comment="贝塞尔切线长度">0</TangentSize>
+      <X Comment="坐标X">39.514507</X>
+      <Y Comment="坐标Y">26.359638</Y>
+      <Z Comment="坐标Z">0.08</Z>
+    </element>
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.PointAbilityData" Comment="绑定的能力" />
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355585</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <IsPathAnchor Comment="是否为寻路参考点">False</IsPathAnchor>
+      <Name Comment="">PointData3</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点">
+        <element>PointData4</element>
+      </NextNames>
+      <NextPercent Comment="路点被选择概率(权重)%">100</NextPercent>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment="">wp</SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Size Comment="尺寸">1</Size>
+      <Tag IsNull="true" />
+      <TangentSize Comment="贝塞尔切线长度">0</TangentSize>
+      <X Comment="坐标X">30.470303</X>
+      <Y Comment="坐标Y">24.34534</Y>
+      <Z Comment="坐标Z">1.71</Z>
+    </element>
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.PointAbilityData" Comment="绑定的能力" />
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355585</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <IsPathAnchor Comment="是否为寻路参考点">False</IsPathAnchor>
+      <Name Comment="">PointData4</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点" />
+      <NextPercent Comment="路点被选择概率(权重)%">100</NextPercent>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment="">wp</SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Size Comment="尺寸">1</Size>
+      <Tag IsNull="true" />
+      <TangentSize Comment="贝塞尔切线长度">0</TangentSize>
+      <X Comment="坐标X">22.726997</X>
+      <Y Comment="坐标Y">22.725063</Y>
+      <Z Comment="坐标Z">2.32</Z>
+    </element>
+  </Points>
+  <Properties type="_Temp_.Battle.Data.Properties._Temp_SceneProperties" Comment="扩展属性">
+    <FuncID IsNull="true" />
+  </Properties>
+  <Regions element_type="DeepMetaGame.Data.ZoneEditor.RegionData" Comment="所有区域">
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.RegionAbilityData" Comment="绑定的能力">
+        <element type="DeepMetaGame.Data.ZoneEditor.SpawnUnitAbilityData" Comment="怪物刷新点">
+          <AliveLimit Comment="存活数量上限（0表示无上限）">0</AliveLimit>
+          <CopyDecorationShape IsNull="true" />
+          <Force Comment="怪物初始阵营">3</Force>
+          <FuncID IsNull="true" />
+          <IntervalMS Comment="刷新间隔时间(毫秒)">5000</IntervalMS>
+          <Name IsNull="true" />
+          <OnceCount Comment="一次刷新数量">1</OnceCount>
+          <OnTheGround Comment="生成在地表上">True</OnTheGround>
+          <OverrideType Comment="重置单位类型">TYPE_MONSTER</OverrideType>
+          <RandomSpawn Comment="随机生成">True</RandomSpawn>
+          <ResetOnWithoutAlive Comment="怪物没有存活时，重置刷新点计时（间隔时间用StartTimeDelayMS控制）">False</ResetOnWithoutAlive>
+          <SpawnEffect IsNull="true" />
+          <SpawnObjectEffect IsNull="true" />
+          <StartDirection Comment="初始朝向(大于等于0有效)">-1</StartDirection>
+          <StartPointName Comment="怪物初始路点">PointData1</StartPointName>
+          <StartTimeDelayMS Comment="延迟启动时间(毫秒)">0</StartTimeDelayMS>
+          <TFormation IsNull="true" />
+          <TotalLimit Comment="总刷新数量上限（0表示无上限）">0</TotalLimit>
+          <UnitGroup IsNull="true" />
+          <UnitLevel Comment="怪物等级">0</UnitLevel>
+          <UnitName IsNull="true" />
+          <UnitTag IsNull="true" />
+          <UnitTemplates element_type="DeepMetaGame.Data.ZoneEditor.SpawnUnitAbilityData+SpawnUnit" Comment="怪物类型模板ID和等级组">
+            <element>
+              <FuncID IsNull="true" />
+              <OverrideType IsNull="true" />
+              <Percent Comment="此单位每次刷新概率百分比">100</Percent>
+              <UnitLevel Comment="单位等级">0</UnitLevel>
+              <UnitTemplateID Comment="单位模板">20001</UnitTemplateID>
+            </element>
+            <element>
+              <FuncID IsNull="true" />
+              <OverrideType IsNull="true" />
+              <Percent Comment="此单位每次刷新概率百分比">100</Percent>
+              <UnitLevel Comment="单位等级">0</UnitLevel>
+              <UnitTemplateID Comment="单位模板">20002</UnitTemplateID>
+            </element>
+            <element>
+              <FuncID IsNull="true" />
+              <OverrideType IsNull="true" />
+              <Percent Comment="此单位每次刷新概率百分比">100</Percent>
+              <UnitLevel Comment="单位等级">0</UnitLevel>
+              <UnitTemplateID Comment="单位模板">20003</UnitTemplateID>
+            </element>
+            <element>
+              <FuncID IsNull="true" />
+              <OverrideType IsNull="true" />
+              <Percent Comment="此单位每次刷新概率百分比">100</Percent>
+              <UnitLevel Comment="单位等级">0</UnitLevel>
+              <UnitTemplateID Comment="单位模板">20004</UnitTemplateID>
+            </element>
+          </UnitTemplates>
+          <WithoutAlive Comment="每次刷新必须所有怪物死亡">False</WithoutAlive>
+        </element>
+      </Abilities>
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355840</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <Name Comment="">enemy</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点" />
+      <R Comment="半径">1</R>
+      <RegionType Comment="区域类型">ROUND</RegionType>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment=""></SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Tag IsNull="true" />
+      <X Comment="坐标X">43.314045</X>
+      <Y Comment="坐标Y">40.15196</Y>
+      <Z Comment="坐标Z">0.07</Z>
+    </element>
+    <element>
+      <Abilities element_type="DeepMetaGame.Data.ZoneEditor.RegionAbilityData" Comment="绑定的能力">
+        <element type="DeepMetaGame.Data.ZoneEditor.PlayerStartAbilityData" Comment="玩家出生点">
+          <FaceDirection Comment="单位朝向">0</FaceDirection>
+          <FlyOpt IsNull="true" />
+          <FuncID IsNull="true" />
+          <Name IsNull="true" />
+          <START_Force Comment="阵营">2</START_Force>
+          <TestActorLevel>0</TestActorLevel>
+          <TestActorTemplateID Comment="测试主角ID">10001</TestActorTemplateID>
+        </element>
+      </Abilities>
+      <Alias IsNull="true" />
+      <Attributes IsNull="true" />
+      <BindingEffect IsNull="true" />
+      <Color Comment="Color(ARGB)">-8355840</Color>
+      <Direction Comment="方向">0</Direction>
+      <DisplayName IsNull="true" />
+      <Enable Comment="逻辑开关">True</Enable>
+      <FuncID IsNull="true" />
+      <Height Comment="体素高度">1</Height>
+      <IsLocked Comment="编辑器是否锁定单位">False</IsLocked>
+      <Name Comment="">start</Name>
+      <NextNames element_type="System.String" Comment="临近的所有点" />
+      <R Comment="半径">0.3</R>
+      <RegionType Comment="区域类型">ROUND</RegionType>
+      <ResourceName IsNull="true" />
+      <ResourceOffset Comment="对应的模型文件(偏移)">
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Value>
+      </ResourceOffset>
+      <SavePath Comment=""></SavePath>
+      <Scale Comment="缩放">1</Scale>
+      <Script IsNull="true" />
+      <Tag IsNull="true" />
+      <X Comment="坐标X">17.523994</X>
+      <Y Comment="坐标Y">28.899376</Y>
+      <Z Comment="坐标Z">8.07</Z>
+    </element>
+  </Regions>
+  <RemoveUnitOnDisconnect Comment="单位掉线即离开场景">False</RemoveUnitOnDisconnect>
+  <ResourceProperty IsNull="true" />
+  <SpaceDivW Comment="空间分割尺寸">18</SpaceDivW>
+  <Terrain Comment="">
+    <GridCellH Comment="每格高">1</GridCellH>
+    <GridCellW Comment="每格宽">1</GridCellW>
+    <TerrainTextData IsNull="true" />
+    <TotalBottom Comment="">-2147483648</TotalBottom>
+    <TotalTop Comment="">2147483647</TotalTop>
+    <XCount Comment="宽（格子）">40</XCount>
+    <YCount Comment="高（格子）">40</YCount>
+  </Terrain>
+  <TotalTimeLimitSEC Comment="游戏总时间，0表示无限制">0</TotalTimeLimitSEC>
+  <Units element_type="DeepMetaGame.Data.ZoneEditor.UnitData" Comment="所有单位" />
+  <UserTag IsNull="true" />
+  <Voxel Comment="体素信息">
+    <ConfigXML Comment="配置">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;data type="DeepCore.Voxel.Data.VoxelBuildConfig"&gt;
+  &lt;AllWorkable Comment="是否所有地形允许行走"&gt;True&lt;/AllWorkable&gt;
+  &lt;AstarType Comment="寻路类型"&gt;Space&lt;/AstarType&gt;
+  &lt;ClipHorizon Comment="切割地平线"&gt;AABB&lt;/ClipHorizon&gt;
+  &lt;ClipHorizonAltitude Comment="是否切割地平线海拔高度"&gt;0&lt;/ClipHorizonAltitude&gt;
+  &lt;ColorIgnore element_type="DeepCore.Voxel.Data.VoxelColorFlag" rank="1" length="1" Comment="抹除颜色标志"&gt;
+    &lt;element&gt;
+      &lt;Color Comment="标记颜色"&gt;
+        &lt;A&gt;0&lt;/A&gt;
+        &lt;B&gt;0&lt;/B&gt;
+        &lt;G&gt;0&lt;/G&gt;
+        &lt;R&gt;0&lt;/R&gt;
+      &lt;/Color&gt;
+    &lt;/element&gt;
+  &lt;/ColorIgnore&gt;
+  &lt;ColorWalkable element_type="DeepCore.Voxel.Data.VoxelColorFlag" rank="1" length="0" Comment="寻路颜色标志" /&gt;
+  &lt;CombineDir Comment="体素合并时，Color值覆盖方式"&gt;Up&lt;/CombineDir&gt;
+  &lt;FlipY Comment="体素导入时，是否翻转Y坐标"&gt;True&lt;/FlipY&gt;
+  &lt;FloatPrecision Comment="浮点精度，大于1有效"&gt;100&lt;/FloatPrecision&gt;
+  &lt;IsGZip Comment="是否压缩"&gt;True&lt;/IsGZip&gt;
+  &lt;LinkDir Comment="体素行走面链接方式"&gt;Sudoku&lt;/LinkDir&gt;
+  &lt;MaxColor Comment="最大颜色数"&gt;256&lt;/MaxColor&gt;
+  &lt;OverrideCellSize Comment="重写网格尺寸，大于0启效"&gt;0&lt;/OverrideCellSize&gt;
+  &lt;StepIntercept Comment="移动时可通过的高度差，阶梯高度"&gt;0.5&lt;/StepIntercept&gt;
+  &lt;VoxelMinDistance Comment="最小体素间距，两个体素如果小于该值，则合并，防止个头太高"&gt;1&lt;/VoxelMinDistance&gt;
+  &lt;VoxelMinHeight Comment="体素最小厚度，防止太薄"&gt;0.25&lt;/VoxelMinHeight&gt;
+&lt;/data&gt;</ConfigXML>
+    <FlipY Comment="资源位置">True</FlipY>
+    <ResourceStartX Comment="资源位置">-72</ResourceStartX>
+    <ResourceStartY Comment="资源位置">44</ResourceStartY>
+    <VoxelBoundingBox Comment="包围盒">
+      <Max>
+        <Value>
+          <X>50</X>
+          <Y>50</Y>
+          <Z>11.64</Z>
+        </Value>
+      </Max>
+      <Min>
+        <Value>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>-3.76</Z>
+        </Value>
+      </Min>
+    </VoxelBoundingBox>
+    <VoxelGridCellH Comment="每格高">0.5</VoxelGridCellH>
+    <VoxelGridCellW Comment="每格宽">0.5</VoxelGridCellW>
+    <VoxelStepIntercept Comment="阶梯高度">0.5</VoxelStepIntercept>
+    <VoxelXCount Comment="宽（格子）">100</VoxelXCount>
+    <VoxelYCount Comment="高（格子）">100</VoxelYCount>
+  </Voxel>
+  <VoxelFileName Comment="体素资源">/vox/polygonmilitary.voxt.voxw</VoxelFileName>
+</data>
