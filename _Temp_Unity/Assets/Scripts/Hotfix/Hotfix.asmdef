@@ -1,0 +1,30 @@
+{
+    "name": "Hotfix",
+    "rootNamespace": "",
+    "references": [
+        "YooAsset",
+        "YooAsset.MiniGame",
+        "FairyGUI",
+        "HybridCLR.Runtime",
+        "WeChatGameEntry",
+        "spine-unity",
+        "spine-csharp",
+        "UniTask",
+        "IngameDebugConsole.Runtime",
+        "DeepCore.Unity.Assets",
+        "ArtTool",
+        "SH7.SDK",
+        "Unity.TextMeshPro",
+        "Shanhai.Baihu.Runtime",
+        "colyseus.nativewebsocket"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
